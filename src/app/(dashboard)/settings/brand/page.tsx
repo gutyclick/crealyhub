@@ -1,0 +1,5 @@
+import { BrandForm } from "@/components/brand/brand-form";
+import { hasSupabaseEnv } from "@/lib/env";
+import { createSupabaseServerClient } from "@/lib/supabase/server";
+import type { BrandRecord } from "@/lib/brand/context";
+export default async function BrandPage(){let brand:BrandRecord|null=null;if(hasSupabaseEnv){const supabase=await createSupabaseServerClient();const{data}=await supabase.from("brands").select("name,description,product_service,website,audience,objectives,tone,personality,default_cta,language,allowed_phrases,forbidden_phrases,hashtag_rules,editorial_rules").limit(1).maybeSingle();brand=data as BrandRecord|null}return <div className="mx-auto max-w-5xl"><header className="mb-8"><p className="eyebrow">Brand Memory</p><h1 className="editorial-title mt-2 text-5xl font-medium">Enséñame cómo suena tu marca.</h1><p className="mt-3 max-w-2xl leading-7 text-[var(--muted)]">Este contexto será la memoria compacta que acompañe cada decisión editorial.</p></header><BrandForm brand={brand} enabled={hasSupabaseEnv}/></div>}

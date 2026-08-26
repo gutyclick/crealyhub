@@ -1,0 +1,1 @@
+-- Intentionally empty in Phase 1. Create the private owner through Supabase Auth.

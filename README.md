@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CrealyHub
 
-## Getting Started
+Community Manager editorial autónomo y privado para Instagram. La aplicación está en **Fase 1: Fundaciones**.
 
-First, run the development server:
+## Desarrollo
 
 ```bash
+copy .env.example .env.local
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Sin variables de Supabase la interfaz inicia en modo demo y no intenta autenticar ni escribir datos.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Base de datos local
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run db:start
+npm run db:reset
+```
 
-## Learn More
+Copia la URL, anon key y service role que muestra Supabase a `.env.local`. Crea un usuario desde Supabase Studio o Auth y entra desde `/login`.
 
-To learn more about Next.js, take a look at the following resources:
+## Seguridad
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Solo la URL y anon key de Supabase llegan al navegador.
+- OpenAI y service role son server-only.
+- RLS limita los datos al propietario de la marca.
+- Review Mode está activo y Autopilot desactivado.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Verificación
 
-## Deploy on Vercel
+```bash
+npm run lint
+npm run typecheck
+npm run build
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+La abstracción de OpenAI usa Responses API y Structured Outputs según la [documentación oficial](https://developers.openai.com/api/reference/typescript/resources/beta/subresources/responses/methods/create).
