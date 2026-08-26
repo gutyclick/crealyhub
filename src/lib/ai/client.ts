@@ -19,6 +19,13 @@ export class OpenAIProvider implements AIProvider {
       text: { format: zodTextFormat(request.schema, request.schemaName) },
     });
     if (!response.output_parsed) throw new Error(`OpenAI returned no structured result for ${request.operation}.`);
-    return request.schema.parse(response.output_parsed);
+    return {
+      data: request.schema.parse(response.output_parsed),
+      usage: {
+        inputTokens: response.usage?.input_tokens ?? 0,
+        outputTokens: response.usage?.output_tokens ?? 0,
+        model: response.model,
+      },
+    };
   }
 }

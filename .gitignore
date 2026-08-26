@@ -48,3 +48,4 @@ next-env.d.ts
 # Graphify machine-local state and caches
 /graphify-out/cache/
 /graphify-out/.*
+/graphify-out/20*/

@@ -1,6 +1,6 @@
 # CrealyHub
 
-Community Manager editorial autónomo y privado para Instagram. La aplicación está en **Fase 1: Fundaciones**.
+Community Manager editorial autónomo y privado para Instagram. Las **Fases 1 y 2** están implementadas: fundaciones y Content Engine.
 
 ## Desarrollo
 
@@ -37,3 +37,18 @@ npm run build
 ```
 
 La abstracción de OpenAI usa Responses API y Structured Outputs según la [documentación oficial](https://developers.openai.com/api/reference/typescript/resources/beta/subresources/responses/methods/create).
+
+## Content Engine
+
+`/create` permite encolar Posts, Stories y Carruseles. Los campos editoriales son opcionales: el planner completa el brief usando Brand Memory y contenido reciente.
+
+El worker se ejecuta con una petición autenticada:
+
+```bash
+curl -X POST http://localhost:3000/api/jobs/generation \
+  -H "Authorization: Bearer $CRON_SECRET"
+```
+
+Cada job es reclamado con lock y lease en PostgreSQL. El pipeline produce Structured Outputs, genera imágenes con GPT Image 2, normaliza los archivos a 1080×1350 o 1080×1920, los guarda en Storage propio y deja el contenido en `PENDING_APPROVAL`.
+
+Los precios usados para estimación son configurables en `.env.local`; deben revisarse cuando cambie la tarifa del proveedor.

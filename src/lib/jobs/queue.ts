@@ -1,0 +1,3 @@
+import { randomUUID } from "node:crypto";
+import type { SupabaseClient } from "@supabase/supabase-js";
+export async function enqueueGeneration(client:SupabaseClient,input:{brandId:string;postId:string;jobType:"GENERATE_POST"|"GENERATE_STORY"|"GENERATE_CAROUSEL"}){const idempotencyKey=`generate:${input.postId}:v1`;const{data,error}=await client.from("generation_jobs").upsert({brand_id:input.brandId,post_id:input.postId,job_type:input.jobType,status:"QUEUED",idempotency_key:idempotencyKey,input_snapshot:{requestId:randomUUID()}},{onConflict:"idempotency_key",ignoreDuplicates:true}).select("id,status").maybeSingle();if(error)throw new Error(`Could not enqueue generation: ${error.message}`);return data}

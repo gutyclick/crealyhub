@@ -1,0 +1,6 @@
+import { createHash } from "node:crypto";
+import sharp from "sharp";
+import type { ImageFormat } from "@/lib/ai/image-generator";
+import type { StorageProvider } from "@/lib/storage/provider";
+const dimensions:Record<ImageFormat,{width:number;height:number}>={POST:{width:1080,height:1350},CAROUSEL:{width:1080,height:1350},STORY:{width:1080,height:1920}};
+export async function finalizeImage(storage:StorageProvider,input:Buffer,format:ImageFormat,key:string){const target=dimensions[format];const output=await sharp(input).rotate().resize(target.width,target.height,{fit:"cover",position:"attention"}).jpeg({quality:92,mozjpeg:true}).toBuffer();const metadata=await sharp(output).metadata();const checksum=createHash("sha256").update(output).digest("hex");const stored=await storage.put(key,output.buffer.slice(output.byteOffset,output.byteOffset+output.byteLength) as ArrayBuffer,"image/jpeg");return{...stored,width:metadata.width??target.width,height:metadata.height??target.height,checksum}}
