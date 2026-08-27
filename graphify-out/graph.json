@@ -238,6 +238,45 @@
       "source_location": "L4"
     },
     {
+      "id": "src_lib_brand_actions_brandactionstate",
+      "label": "BrandActionState",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "brand-form.tsx",
+      "file_type": "code",
+      "norm_label": "brandactionstate",
+      "source_file": "src/lib/brand/actions.ts",
+      "source_location": "L7"
+    },
+    {
+      "id": "src_lib_brand_context_brandrecord",
+      "label": "BrandRecord",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "brand-form.tsx",
+      "file_type": "code",
+      "norm_label": "brandrecord",
+      "source_file": "src/lib/brand/context.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_lib_brand_schema_brandformvalues",
+      "label": "BrandFormValues",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "brand-form.tsx",
+      "file_type": "code",
+      "norm_label": "brandformvalues",
+      "source_file": "src/lib/brand/schema.ts",
+      "source_location": "L21"
+    },
+    {
       "id": "src_lib_editorial_types_calendarpost",
       "label": "CalendarPost",
       "_callable": true,
@@ -459,43 +498,28 @@
       "source_location": "L3"
     },
     {
-      "id": "src_lib_brand_actions_brandactionstate",
-      "label": "BrandActionState",
+      "id": "src_app_api_jobs_generation_route_authorized",
+      "label": "authorized()",
       "_callable": true,
-      "_callable_class": true,
       "_origin": "ast",
-      "community": 9,
-      "community_name": "createSupabaseServerClient",
+      "community": 0,
+      "community_name": "generation.ts",
       "file_type": "code",
-      "norm_label": "brandactionstate",
-      "source_file": "src/lib/brand/actions.ts",
+      "norm_label": "authorized()",
+      "source_file": "src/app/api/jobs/generation/route.ts",
+      "source_location": "L6"
+    },
+    {
+      "id": "src_app_api_jobs_generation_route_run",
+      "label": "run()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "generation.ts",
+      "file_type": "code",
+      "norm_label": "run()",
+      "source_file": "src/app/api/jobs/generation/route.ts",
       "source_location": "L7"
-    },
-    {
-      "id": "src_lib_brand_context_brandrecord",
-      "label": "BrandRecord",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "createSupabaseServerClient",
-      "file_type": "code",
-      "norm_label": "brandrecord",
-      "source_file": "src/lib/brand/context.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_lib_brand_schema_brandformvalues",
-      "label": "BrandFormValues",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "createSupabaseServerClient",
-      "file_type": "code",
-      "norm_label": "brandformvalues",
-      "source_file": "src/lib/brand/schema.ts",
-      "source_location": "L21"
     },
     {
       "id": "src_lib_ai_carousel_planner_plancarousel",
@@ -606,6 +630,18 @@
       "source_location": "L2"
     },
     {
+      "id": "src_lib_jobs_generation_failgenerationjob",
+      "label": "failGenerationJob()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "generation.ts",
+      "file_type": "code",
+      "norm_label": "failgenerationjob()",
+      "source_file": "src/lib/jobs/generation.ts",
+      "source_location": "L26"
+    },
+    {
       "id": "src_lib_jobs_generation_processgenerationjob",
       "label": "processGenerationJob()",
       "_callable": true,
@@ -676,6 +712,30 @@
       "norm_label": "recordusage()",
       "source_file": "src/lib/usage/tracker.ts",
       "source_location": "L5"
+    },
+    {
+      "id": "src_app_api_jobs_publishing_route_authorized",
+      "label": "authorized()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "publishing.ts",
+      "file_type": "code",
+      "norm_label": "authorized()",
+      "source_file": "src/app/api/jobs/publishing/route.ts",
+      "source_location": "L7"
+    },
+    {
+      "id": "src_app_api_jobs_publishing_route_run",
+      "label": "run()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "publishing.ts",
+      "file_type": "code",
+      "norm_label": "run()",
+      "source_file": "src/app/api/jobs/publishing/route.ts",
+      "source_location": "L8"
     },
     {
       "id": "src_lib_instagram_client_instagramclient_call",
@@ -822,6 +882,18 @@
       "source_location": "L11"
     },
     {
+      "id": "src_lib_jobs_publishing_failpublishingjob",
+      "label": "failPublishingJob()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "publishing.ts",
+      "file_type": "code",
+      "norm_label": "failpublishingjob()",
+      "source_file": "src/lib/jobs/publishing.ts",
+      "source_location": "L10"
+    },
+    {
       "id": "src_lib_jobs_publishing_processpublishingjob",
       "label": "processPublishingJob()",
       "_callable": true,
@@ -918,24 +990,12 @@
       "source_location": "L4"
     },
     {
-      "id": "src_app_dashboard_library_page_page",
-      "label": "Page()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "library/page.tsx",
-      "file_type": "code",
-      "norm_label": "page()",
-      "source_file": "src/app/(dashboard)/library/page.tsx",
-      "source_location": "L2"
-    },
-    {
       "id": "src_components_shell_coming_soon_comingsoon",
       "label": "ComingSoon()",
       "_callable": true,
       "_origin": "ast",
       "community": 11,
-      "community_name": "library/page.tsx",
+      "community_name": "coming-soon.tsx",
       "file_type": "code",
       "norm_label": "comingsoon()",
       "source_file": "src/components/shell/coming-soon.tsx",
@@ -1194,136 +1254,112 @@
       "source_location": "L4"
     },
     {
-      "id": "src_app_api_jobs_analytics_route_authorized",
-      "label": "authorized()",
+      "id": "src_app_dashboard_settings_brand_page_brandpage",
+      "label": "BrandPage()",
       "_callable": true,
       "_origin": "ast",
       "community": 23,
-      "community_name": "publishing/route.ts",
+      "community_name": "brand-form.tsx",
       "file_type": "code",
-      "norm_label": "authorized()",
-      "source_file": "src/app/api/jobs/analytics/route.ts",
-      "source_location": "L7"
+      "norm_label": "brandpage()",
+      "source_file": "src/app/(dashboard)/settings/brand/page.tsx",
+      "source_location": "L5"
     },
     {
-      "id": "src_app_api_jobs_analytics_route_run",
-      "label": "run()",
+      "id": "src_components_brand_brand_form_brandform",
+      "label": "BrandForm()",
       "_callable": true,
       "_origin": "ast",
       "community": 23,
-      "community_name": "publishing/route.ts",
+      "community_name": "brand-form.tsx",
       "file_type": "code",
-      "norm_label": "run()",
-      "source_file": "src/app/api/jobs/analytics/route.ts",
+      "norm_label": "brandform()",
+      "source_file": "src/components/brand/brand-form.tsx",
       "source_location": "L8"
     },
     {
-      "id": "src_app_api_jobs_automation_route_authorized",
-      "label": "authorized()",
+      "id": "src_components_brand_brand_form_field",
+      "label": "Field()",
       "_callable": true,
       "_origin": "ast",
       "community": 23,
-      "community_name": "publishing/route.ts",
+      "community_name": "brand-form.tsx",
       "file_type": "code",
-      "norm_label": "authorized()",
-      "source_file": "src/app/api/jobs/automation/route.ts",
-      "source_location": "L7"
+      "norm_label": "field()",
+      "source_file": "src/components/brand/brand-form.tsx",
+      "source_location": "L9"
     },
     {
-      "id": "src_app_api_jobs_automation_route_run",
-      "label": "run()",
+      "id": "src_components_brand_brand_form_submit",
+      "label": "Submit()",
       "_callable": true,
       "_origin": "ast",
       "community": 23,
-      "community_name": "publishing/route.ts",
+      "community_name": "brand-form.tsx",
       "file_type": "code",
-      "norm_label": "run()",
-      "source_file": "src/app/api/jobs/automation/route.ts",
-      "source_location": "L8"
+      "norm_label": "submit()",
+      "source_file": "src/components/brand/brand-form.tsx",
+      "source_location": "L11"
     },
     {
-      "id": "src_app_api_jobs_generation_route_authorized",
-      "label": "authorized()",
+      "id": "src_components_brand_brand_form_textfield",
+      "label": "TextField()",
       "_callable": true,
       "_origin": "ast",
       "community": 23,
-      "community_name": "publishing/route.ts",
+      "community_name": "brand-form.tsx",
       "file_type": "code",
-      "norm_label": "authorized()",
-      "source_file": "src/app/api/jobs/generation/route.ts",
-      "source_location": "L6"
-    },
-    {
-      "id": "src_app_api_jobs_generation_route_run",
-      "label": "run()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "publishing/route.ts",
-      "file_type": "code",
-      "norm_label": "run()",
-      "source_file": "src/app/api/jobs/generation/route.ts",
-      "source_location": "L7"
-    },
-    {
-      "id": "src_app_api_jobs_publishing_route_authorized",
-      "label": "authorized()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "publishing/route.ts",
-      "file_type": "code",
-      "norm_label": "authorized()",
-      "source_file": "src/app/api/jobs/publishing/route.ts",
-      "source_location": "L7"
-    },
-    {
-      "id": "src_app_api_jobs_publishing_route_run",
-      "label": "run()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "publishing/route.ts",
-      "file_type": "code",
-      "norm_label": "run()",
-      "source_file": "src/app/api/jobs/publishing/route.ts",
-      "source_location": "L8"
-    },
-    {
-      "id": "src_lib_jobs_generation_failgenerationjob",
-      "label": "failGenerationJob()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "publishing/route.ts",
-      "file_type": "code",
-      "norm_label": "failgenerationjob()",
-      "source_file": "src/lib/jobs/generation.ts",
-      "source_location": "L26"
-    },
-    {
-      "id": "src_lib_jobs_publishing_failpublishingjob",
-      "label": "failPublishingJob()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "publishing/route.ts",
-      "file_type": "code",
-      "norm_label": "failpublishingjob()",
-      "source_file": "src/lib/jobs/publishing.ts",
+      "norm_label": "textfield()",
+      "source_file": "src/components/brand/brand-form.tsx",
       "source_location": "L10"
     },
     {
-      "id": "src_lib_supabase_admin_createsupabaseadminclient",
-      "label": "createSupabaseAdminClient()",
+      "id": "src_lib_brand_actions_savebrand",
+      "label": "saveBrand()",
       "_callable": true,
       "_origin": "ast",
       "community": 23,
-      "community_name": "publishing/route.ts",
+      "community_name": "brand-form.tsx",
       "file_type": "code",
-      "norm_label": "createsupabaseadminclient()",
-      "source_file": "src/lib/supabase/admin.ts",
+      "norm_label": "savebrand()",
+      "source_file": "src/lib/brand/actions.ts",
+      "source_location": "L12"
+    },
+    {
+      "id": "src_lib_brand_actions_splitlines",
+      "label": "splitLines()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "brand-form.tsx",
+      "file_type": "code",
+      "norm_label": "splitlines()",
+      "source_file": "src/lib/brand/actions.ts",
+      "source_location": "L9"
+    },
+    {
+      "id": "src_app_dashboard_error_dashboarderror",
+      "label": "DashboardError()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 24,
+      "community_name": "error.tsx",
+      "file_type": "code",
+      "norm_label": "dashboarderror()",
+      "source_file": "src/app/(dashboard)/error.tsx",
       "source_location": "L3"
+    },
+    {
+      "id": "src_app_dashboard_error_friendly",
+      "label": "friendly()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 24,
+      "community_name": "error.tsx",
+      "file_type": "code",
+      "norm_label": "friendly()",
+      "source_file": "src/app/(dashboard)/error.tsx",
+      "source_location": "L4"
     },
     {
       "id": "src_app_dashboard_approvals_page_page",
@@ -1698,6 +1734,54 @@
       "source_location": "L8"
     },
     {
+      "id": "src_app_api_jobs_analytics_route_authorized",
+      "label": "authorized()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "buffer.ts",
+      "file_type": "code",
+      "norm_label": "authorized()",
+      "source_file": "src/app/api/jobs/analytics/route.ts",
+      "source_location": "L7"
+    },
+    {
+      "id": "src_app_api_jobs_analytics_route_run",
+      "label": "run()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "buffer.ts",
+      "file_type": "code",
+      "norm_label": "run()",
+      "source_file": "src/app/api/jobs/analytics/route.ts",
+      "source_location": "L8"
+    },
+    {
+      "id": "src_app_api_jobs_automation_route_authorized",
+      "label": "authorized()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "buffer.ts",
+      "file_type": "code",
+      "norm_label": "authorized()",
+      "source_file": "src/app/api/jobs/automation/route.ts",
+      "source_location": "L7"
+    },
+    {
+      "id": "src_app_api_jobs_automation_route_run",
+      "label": "run()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "buffer.ts",
+      "file_type": "code",
+      "norm_label": "run()",
+      "source_file": "src/app/api/jobs/automation/route.ts",
+      "source_location": "L8"
+    },
+    {
       "id": "src_app_dashboard_create_page_page",
       "label": "Page()",
       "_callable": true,
@@ -1830,6 +1914,18 @@
       "source_location": "L6"
     },
     {
+      "id": "src_lib_supabase_admin_createsupabaseadminclient",
+      "label": "createSupabaseAdminClient()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "buffer.ts",
+      "file_type": "code",
+      "norm_label": "createsupabaseadminclient()",
+      "source_file": "src/lib/supabase/admin.ts",
+      "source_location": "L3"
+    },
+    {
       "id": "src_app_dashboard_analytics_page_empty",
       "label": "Empty()",
       "_callable": true,
@@ -1890,6 +1986,30 @@
       "source_location": "L5"
     },
     {
+      "id": "src_app_dashboard_library_page_page",
+      "label": "Page()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "createSupabaseServerClient",
+      "file_type": "code",
+      "norm_label": "page()",
+      "source_file": "src/app/(dashboard)/library/page.tsx",
+      "source_location": "L6"
+    },
+    {
+      "id": "src_app_dashboard_overview_page_emptynext",
+      "label": "EmptyNext()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "createSupabaseServerClient",
+      "file_type": "code",
+      "norm_label": "emptynext()",
+      "source_file": "src/app/(dashboard)/overview/page.tsx",
+      "source_location": "L8"
+    },
+    {
       "id": "src_app_dashboard_overview_page_metric",
       "label": "Metric()",
       "_callable": true,
@@ -1899,7 +2019,7 @@
       "file_type": "code",
       "norm_label": "metric()",
       "source_file": "src/app/(dashboard)/overview/page.tsx",
-      "source_location": "L5"
+      "source_location": "L9"
     },
     {
       "id": "src_app_dashboard_overview_page_overviewpage",
@@ -1911,19 +2031,19 @@
       "file_type": "code",
       "norm_label": "overviewpage()",
       "source_file": "src/app/(dashboard)/overview/page.tsx",
-      "source_location": "L4"
+      "source_location": "L6"
     },
     {
-      "id": "src_app_dashboard_settings_brand_page_brandpage",
-      "label": "BrandPage()",
+      "id": "src_app_dashboard_overview_page_setup",
+      "label": "Setup()",
       "_callable": true,
       "_origin": "ast",
       "community": 9,
       "community_name": "createSupabaseServerClient",
       "file_type": "code",
-      "norm_label": "brandpage()",
-      "source_file": "src/app/(dashboard)/settings/brand/page.tsx",
-      "source_location": "L5"
+      "norm_label": "setup()",
+      "source_file": "src/app/(dashboard)/overview/page.tsx",
+      "source_location": "L7"
     },
     {
       "id": "src_app_dashboard_settings_instagram_page_page",
@@ -1974,54 +2094,6 @@
       "source_location": "L7"
     },
     {
-      "id": "src_components_brand_brand_form_brandform",
-      "label": "BrandForm()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "createSupabaseServerClient",
-      "file_type": "code",
-      "norm_label": "brandform()",
-      "source_file": "src/components/brand/brand-form.tsx",
-      "source_location": "L8"
-    },
-    {
-      "id": "src_components_brand_brand_form_field",
-      "label": "Field()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "createSupabaseServerClient",
-      "file_type": "code",
-      "norm_label": "field()",
-      "source_file": "src/components/brand/brand-form.tsx",
-      "source_location": "L9"
-    },
-    {
-      "id": "src_components_brand_brand_form_submit",
-      "label": "Submit()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "createSupabaseServerClient",
-      "file_type": "code",
-      "norm_label": "submit()",
-      "source_file": "src/components/brand/brand-form.tsx",
-      "source_location": "L11"
-    },
-    {
-      "id": "src_components_brand_brand_form_textfield",
-      "label": "TextField()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "createSupabaseServerClient",
-      "file_type": "code",
-      "norm_label": "textfield()",
-      "source_file": "src/components/brand/brand-form.tsx",
-      "source_location": "L10"
-    },
-    {
       "id": "src_lib_analytics_data_getanalyticsdashboard",
       "label": "getAnalyticsDashboard()",
       "_callable": true,
@@ -2058,28 +2130,52 @@
       "source_location": "L15"
     },
     {
-      "id": "src_lib_brand_actions_savebrand",
-      "label": "saveBrand()",
+      "id": "src_lib_dashboard_data_getlibrarydata",
+      "label": "getLibraryData()",
       "_callable": true,
       "_origin": "ast",
       "community": 9,
       "community_name": "createSupabaseServerClient",
       "file_type": "code",
-      "norm_label": "savebrand()",
-      "source_file": "src/lib/brand/actions.ts",
-      "source_location": "L12"
+      "norm_label": "getlibrarydata()",
+      "source_file": "src/lib/dashboard/data.ts",
+      "source_location": "L9"
     },
     {
-      "id": "src_lib_brand_actions_splitlines",
-      "label": "splitLines()",
+      "id": "src_lib_dashboard_data_getoverviewdata",
+      "label": "getOverviewData()",
       "_callable": true,
       "_origin": "ast",
       "community": 9,
       "community_name": "createSupabaseServerClient",
       "file_type": "code",
-      "norm_label": "splitlines()",
-      "source_file": "src/lib/brand/actions.ts",
-      "source_location": "L9"
+      "norm_label": "getoverviewdata()",
+      "source_file": "src/lib/dashboard/data.ts",
+      "source_location": "L7"
+    },
+    {
+      "id": "src_lib_dashboard_data_panamaday",
+      "label": "panamaDay()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "createSupabaseServerClient",
+      "file_type": "code",
+      "norm_label": "panamaday()",
+      "source_file": "src/lib/dashboard/data.ts",
+      "source_location": "L5"
+    },
+    {
+      "id": "src_lib_dashboard_data_signed",
+      "label": "signed()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "createSupabaseServerClient",
+      "file_type": "code",
+      "norm_label": "signed()",
+      "source_file": "src/lib/dashboard/data.ts",
+      "source_location": "L4"
     },
     {
       "id": "src_lib_instagram_data_getinstagramconnection",
@@ -2116,6 +2212,39 @@
       "norm_label": "getusagedashboard()",
       "source_file": "src/lib/usage/data.ts",
       "source_location": "L4"
+    },
+    {
+      "id": "src_app_api_jobs_generation_route",
+      "label": "generation/route.ts",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "generation.ts",
+      "file_type": "code",
+      "norm_label": "generation/route.ts",
+      "source_file": "src/app/api/jobs/generation/route.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_app_api_jobs_generation_route_get",
+      "label": "GET",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "generation.ts",
+      "file_type": "code",
+      "norm_label": "get",
+      "source_file": "src/app/api/jobs/generation/route.ts",
+      "source_location": "L8"
+    },
+    {
+      "id": "src_app_api_jobs_generation_route_post",
+      "label": "POST",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "generation.ts",
+      "file_type": "code",
+      "norm_label": "post",
+      "source_file": "src/app/api/jobs/generation/route.ts",
+      "source_location": "L8"
     },
     {
       "id": "src_lib_ai_carousel_planner",
@@ -2316,6 +2445,17 @@
       "source_location": "L4"
     },
     {
+      "id": "src_lib_env_supabasesecretkey",
+      "label": "supabaseSecretKey",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "generation.ts",
+      "file_type": "code",
+      "norm_label": "supabasesecretkey",
+      "source_file": "src/lib/env.ts",
+      "source_location": "L47"
+    },
+    {
       "id": "src_lib_jobs_generation",
       "label": "generation.ts",
       "_origin": "ast",
@@ -2324,6 +2464,17 @@
       "file_type": "code",
       "norm_label": "generation.ts",
       "source_file": "src/lib/jobs/generation.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_lib_supabase_admin",
+      "label": "admin.ts",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "generation.ts",
+      "file_type": "code",
+      "norm_label": "admin.ts",
+      "source_file": "src/lib/supabase/admin.ts",
       "source_location": "L1"
     },
     {
@@ -2347,6 +2498,50 @@
       "norm_label": "tracker.ts",
       "source_file": "src/lib/usage/tracker.ts",
       "source_location": "L1"
+    },
+    {
+      "id": "src_app_api_jobs_publishing_route",
+      "label": "publishing/route.ts",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "publishing.ts",
+      "file_type": "code",
+      "norm_label": "publishing/route.ts",
+      "source_file": "src/app/api/jobs/publishing/route.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_app_api_jobs_publishing_route_get",
+      "label": "GET",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "publishing.ts",
+      "file_type": "code",
+      "norm_label": "get",
+      "source_file": "src/app/api/jobs/publishing/route.ts",
+      "source_location": "L9"
+    },
+    {
+      "id": "src_app_api_jobs_publishing_route_maxduration",
+      "label": "maxDuration",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "publishing.ts",
+      "file_type": "code",
+      "norm_label": "maxduration",
+      "source_file": "src/app/api/jobs/publishing/route.ts",
+      "source_location": "L6"
+    },
+    {
+      "id": "src_app_api_jobs_publishing_route_post",
+      "label": "POST",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "publishing.ts",
+      "file_type": "code",
+      "norm_label": "post",
+      "source_file": "src/app/api/jobs/publishing/route.ts",
+      "source_location": "L9"
     },
     {
       "id": "src_lib_instagram_client",
@@ -2459,22 +2654,11 @@
       "source_location": "L1"
     },
     {
-      "id": "src_app_dashboard_library_page",
-      "label": "library/page.tsx",
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "library/page.tsx",
-      "file_type": "code",
-      "norm_label": "library/page.tsx",
-      "source_file": "src/app/(dashboard)/library/page.tsx",
-      "source_location": "L1"
-    },
-    {
       "id": "src_components_shell_coming_soon",
       "label": "coming-soon.tsx",
       "_origin": "ast",
       "community": 11,
-      "community_name": "library/page.tsx",
+      "community_name": "coming-soon.tsx",
       "file_type": "code",
       "norm_label": "coming-soon.tsx",
       "source_file": "src/components/shell/coming-soon.tsx",
@@ -2876,190 +3060,80 @@
       "source_location": "L1"
     },
     {
-      "id": "src_app_api_jobs_analytics_route",
-      "label": "analytics/route.ts",
+      "id": "src_app_dashboard_settings_brand_page",
+      "label": "brand/page.tsx",
       "_origin": "ast",
       "community": 23,
-      "community_name": "publishing/route.ts",
+      "community_name": "brand-form.tsx",
       "file_type": "code",
-      "norm_label": "analytics/route.ts",
-      "source_file": "src/app/api/jobs/analytics/route.ts",
+      "norm_label": "brand/page.tsx",
+      "source_file": "src/app/(dashboard)/settings/brand/page.tsx",
       "source_location": "L1"
     },
     {
-      "id": "src_app_api_jobs_analytics_route_get",
-      "label": "GET",
+      "id": "src_components_brand_brand_form",
+      "label": "brand-form.tsx",
       "_origin": "ast",
       "community": 23,
-      "community_name": "publishing/route.ts",
+      "community_name": "brand-form.tsx",
       "file_type": "code",
-      "norm_label": "get",
-      "source_file": "src/app/api/jobs/analytics/route.ts",
-      "source_location": "L9"
-    },
-    {
-      "id": "src_app_api_jobs_analytics_route_maxduration",
-      "label": "maxDuration",
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "publishing/route.ts",
-      "file_type": "code",
-      "norm_label": "maxduration",
-      "source_file": "src/app/api/jobs/analytics/route.ts",
-      "source_location": "L6"
-    },
-    {
-      "id": "src_app_api_jobs_analytics_route_post",
-      "label": "POST",
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "publishing/route.ts",
-      "file_type": "code",
-      "norm_label": "post",
-      "source_file": "src/app/api/jobs/analytics/route.ts",
-      "source_location": "L9"
-    },
-    {
-      "id": "src_app_api_jobs_automation_route",
-      "label": "automation/route.ts",
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "publishing/route.ts",
-      "file_type": "code",
-      "norm_label": "automation/route.ts",
-      "source_file": "src/app/api/jobs/automation/route.ts",
+      "norm_label": "brand-form.tsx",
+      "source_file": "src/components/brand/brand-form.tsx",
       "source_location": "L1"
     },
     {
-      "id": "src_app_api_jobs_automation_route_get",
-      "label": "GET",
+      "id": "src_components_brand_brand_form_initial",
+      "label": "initial",
       "_origin": "ast",
       "community": 23,
-      "community_name": "publishing/route.ts",
+      "community_name": "brand-form.tsx",
       "file_type": "code",
-      "norm_label": "get",
-      "source_file": "src/app/api/jobs/automation/route.ts",
-      "source_location": "L9"
+      "norm_label": "initial",
+      "source_file": "src/components/brand/brand-form.tsx",
+      "source_location": "L7"
     },
     {
-      "id": "src_app_api_jobs_automation_route_maxduration",
-      "label": "maxDuration",
+      "id": "src_lib_brand_actions",
+      "label": "brand/actions.ts",
       "_origin": "ast",
       "community": 23,
-      "community_name": "publishing/route.ts",
+      "community_name": "brand-form.tsx",
       "file_type": "code",
-      "norm_label": "maxduration",
-      "source_file": "src/app/api/jobs/automation/route.ts",
-      "source_location": "L6"
-    },
-    {
-      "id": "src_app_api_jobs_automation_route_post",
-      "label": "POST",
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "publishing/route.ts",
-      "file_type": "code",
-      "norm_label": "post",
-      "source_file": "src/app/api/jobs/automation/route.ts",
-      "source_location": "L9"
-    },
-    {
-      "id": "src_app_api_jobs_generation_route",
-      "label": "generation/route.ts",
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "publishing/route.ts",
-      "file_type": "code",
-      "norm_label": "generation/route.ts",
-      "source_file": "src/app/api/jobs/generation/route.ts",
+      "norm_label": "brand/actions.ts",
+      "source_file": "src/lib/brand/actions.ts",
       "source_location": "L1"
     },
     {
-      "id": "src_app_api_jobs_generation_route_get",
-      "label": "GET",
+      "id": "src_lib_brand_schema",
+      "label": "brand/schema.ts",
       "_origin": "ast",
       "community": 23,
-      "community_name": "publishing/route.ts",
+      "community_name": "brand-form.tsx",
       "file_type": "code",
-      "norm_label": "get",
-      "source_file": "src/app/api/jobs/generation/route.ts",
-      "source_location": "L8"
-    },
-    {
-      "id": "src_app_api_jobs_generation_route_post",
-      "label": "POST",
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "publishing/route.ts",
-      "file_type": "code",
-      "norm_label": "post",
-      "source_file": "src/app/api/jobs/generation/route.ts",
-      "source_location": "L8"
-    },
-    {
-      "id": "src_app_api_jobs_publishing_route",
-      "label": "publishing/route.ts",
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "publishing/route.ts",
-      "file_type": "code",
-      "norm_label": "publishing/route.ts",
-      "source_file": "src/app/api/jobs/publishing/route.ts",
+      "norm_label": "brand/schema.ts",
+      "source_file": "src/lib/brand/schema.ts",
       "source_location": "L1"
     },
     {
-      "id": "src_app_api_jobs_publishing_route_get",
-      "label": "GET",
+      "id": "src_lib_brand_schema_brandformschema",
+      "label": "brandFormSchema",
       "_origin": "ast",
       "community": 23,
-      "community_name": "publishing/route.ts",
+      "community_name": "brand-form.tsx",
       "file_type": "code",
-      "norm_label": "get",
-      "source_file": "src/app/api/jobs/publishing/route.ts",
-      "source_location": "L9"
+      "norm_label": "brandformschema",
+      "source_file": "src/lib/brand/schema.ts",
+      "source_location": "L3"
     },
     {
-      "id": "src_app_api_jobs_publishing_route_maxduration",
-      "label": "maxDuration",
+      "id": "src_app_dashboard_error",
+      "label": "error.tsx",
       "_origin": "ast",
-      "community": 23,
-      "community_name": "publishing/route.ts",
+      "community": 24,
+      "community_name": "error.tsx",
       "file_type": "code",
-      "norm_label": "maxduration",
-      "source_file": "src/app/api/jobs/publishing/route.ts",
-      "source_location": "L6"
-    },
-    {
-      "id": "src_app_api_jobs_publishing_route_post",
-      "label": "POST",
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "publishing/route.ts",
-      "file_type": "code",
-      "norm_label": "post",
-      "source_file": "src/app/api/jobs/publishing/route.ts",
-      "source_location": "L9"
-    },
-    {
-      "id": "src_lib_env_supabasesecretkey",
-      "label": "supabaseSecretKey",
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "publishing/route.ts",
-      "file_type": "code",
-      "norm_label": "supabasesecretkey",
-      "source_file": "src/lib/env.ts",
-      "source_location": "L47"
-    },
-    {
-      "id": "src_lib_supabase_admin",
-      "label": "admin.ts",
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "publishing/route.ts",
-      "file_type": "code",
-      "norm_label": "admin.ts",
-      "source_file": "src/lib/supabase/admin.ts",
+      "norm_label": "error.tsx",
+      "source_file": "src/app/(dashboard)/error.tsx",
       "source_location": "L1"
     },
     {
@@ -4174,6 +4248,94 @@
       "source_location": "L26"
     },
     {
+      "id": "src_app_api_jobs_analytics_route",
+      "label": "analytics/route.ts",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "buffer.ts",
+      "file_type": "code",
+      "norm_label": "analytics/route.ts",
+      "source_file": "src/app/api/jobs/analytics/route.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_app_api_jobs_analytics_route_get",
+      "label": "GET",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "buffer.ts",
+      "file_type": "code",
+      "norm_label": "get",
+      "source_file": "src/app/api/jobs/analytics/route.ts",
+      "source_location": "L9"
+    },
+    {
+      "id": "src_app_api_jobs_analytics_route_maxduration",
+      "label": "maxDuration",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "buffer.ts",
+      "file_type": "code",
+      "norm_label": "maxduration",
+      "source_file": "src/app/api/jobs/analytics/route.ts",
+      "source_location": "L6"
+    },
+    {
+      "id": "src_app_api_jobs_analytics_route_post",
+      "label": "POST",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "buffer.ts",
+      "file_type": "code",
+      "norm_label": "post",
+      "source_file": "src/app/api/jobs/analytics/route.ts",
+      "source_location": "L9"
+    },
+    {
+      "id": "src_app_api_jobs_automation_route",
+      "label": "automation/route.ts",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "buffer.ts",
+      "file_type": "code",
+      "norm_label": "automation/route.ts",
+      "source_file": "src/app/api/jobs/automation/route.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_app_api_jobs_automation_route_get",
+      "label": "GET",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "buffer.ts",
+      "file_type": "code",
+      "norm_label": "get",
+      "source_file": "src/app/api/jobs/automation/route.ts",
+      "source_location": "L9"
+    },
+    {
+      "id": "src_app_api_jobs_automation_route_maxduration",
+      "label": "maxDuration",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "buffer.ts",
+      "file_type": "code",
+      "norm_label": "maxduration",
+      "source_file": "src/app/api/jobs/automation/route.ts",
+      "source_location": "L6"
+    },
+    {
+      "id": "src_app_api_jobs_automation_route_post",
+      "label": "POST",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "buffer.ts",
+      "file_type": "code",
+      "norm_label": "post",
+      "source_file": "src/app/api/jobs/automation/route.ts",
+      "source_location": "L9"
+    },
+    {
       "id": "src_app_dashboard_create_page",
       "label": "create/page.tsx",
       "_origin": "ast",
@@ -4339,6 +4501,17 @@
       "source_location": "L5"
     },
     {
+      "id": "src_app_dashboard_library_page",
+      "label": "library/page.tsx",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "createSupabaseServerClient",
+      "file_type": "code",
+      "norm_label": "library/page.tsx",
+      "source_file": "src/app/(dashboard)/library/page.tsx",
+      "source_location": "L1"
+    },
+    {
       "id": "src_app_dashboard_overview_page",
       "label": "overview/page.tsx",
       "_origin": "ast",
@@ -4347,17 +4520,6 @@
       "file_type": "code",
       "norm_label": "overview/page.tsx",
       "source_file": "src/app/(dashboard)/overview/page.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_app_dashboard_settings_brand_page",
-      "label": "brand/page.tsx",
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "createSupabaseServerClient",
-      "file_type": "code",
-      "norm_label": "brand/page.tsx",
-      "source_file": "src/app/(dashboard)/settings/brand/page.tsx",
       "source_location": "L1"
     },
     {
@@ -4416,28 +4578,6 @@
       "source_location": "L6"
     },
     {
-      "id": "src_components_brand_brand_form",
-      "label": "brand-form.tsx",
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "createSupabaseServerClient",
-      "file_type": "code",
-      "norm_label": "brand-form.tsx",
-      "source_file": "src/components/brand/brand-form.tsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_components_brand_brand_form_initial",
-      "label": "initial",
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "createSupabaseServerClient",
-      "file_type": "code",
-      "norm_label": "initial",
-      "source_file": "src/components/brand/brand-form.tsx",
-      "source_location": "L7"
-    },
-    {
       "id": "src_lib_analytics_data",
       "label": "analytics/data.ts",
       "_origin": "ast",
@@ -4460,37 +4600,15 @@
       "source_location": "L1"
     },
     {
-      "id": "src_lib_brand_actions",
-      "label": "brand/actions.ts",
+      "id": "src_lib_dashboard_data",
+      "label": "dashboard/data.ts",
       "_origin": "ast",
       "community": 9,
       "community_name": "createSupabaseServerClient",
       "file_type": "code",
-      "norm_label": "brand/actions.ts",
-      "source_file": "src/lib/brand/actions.ts",
+      "norm_label": "dashboard/data.ts",
+      "source_file": "src/lib/dashboard/data.ts",
       "source_location": "L1"
-    },
-    {
-      "id": "src_lib_brand_schema",
-      "label": "brand/schema.ts",
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "createSupabaseServerClient",
-      "file_type": "code",
-      "norm_label": "brand/schema.ts",
-      "source_file": "src/lib/brand/schema.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_lib_brand_schema_brandformschema",
-      "label": "brandFormSchema",
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "createSupabaseServerClient",
-      "file_type": "code",
-      "norm_label": "brandformschema",
-      "source_file": "src/lib/brand/schema.ts",
-      "source_location": "L3"
     },
     {
       "id": "src_lib_env_hassupabaseenv",
@@ -4826,6 +4944,42 @@
       "weight": 1.0
     },
     {
+      "source": "src_app_dashboard_error_dashboarderror",
+      "target": "src_app_dashboard_error_friendly",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/app/(dashboard)/error.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_dashboard_library_page_page",
+      "target": "src_lib_dashboard_data_getlibrarydata",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/app/(dashboard)/library/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_dashboard_overview_page_overviewpage",
+      "target": "src_lib_dashboard_data_getoverviewdata",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/app/(dashboard)/overview/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
       "source": "src_app_dashboard_settings_brand_page_brandpage",
       "target": "src_lib_supabase_server_createsupabaseserverclient",
       "relation": "calls",
@@ -5099,6 +5253,66 @@
       "context": "call",
       "source_file": "src/lib/content/actions.ts",
       "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_dashboard_data_getlibrarydata",
+      "target": "src_lib_dashboard_data_signed",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/dashboard/data.ts",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_dashboard_data_getlibrarydata",
+      "target": "src_lib_supabase_server_createsupabaseserverclient",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/dashboard/data.ts",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_dashboard_data_getoverviewdata",
+      "target": "src_lib_dashboard_data_panamaday",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/dashboard/data.ts",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_dashboard_data_getoverviewdata",
+      "target": "src_lib_dashboard_data_signed",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/dashboard/data.ts",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_dashboard_data_getoverviewdata",
+      "target": "src_lib_supabase_server_createsupabaseserverclient",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/dashboard/data.ts",
+      "source_location": "L7",
       "weight": 1.0
     },
     {
@@ -6579,14 +6793,38 @@
     },
     {
       "source": "src_app_dashboard_library_page",
-      "target": "src_components_shell_coming_soon_comingsoon",
+      "target": "src_lib_dashboard_data_getlibrarydata",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/app/(dashboard)/library/page.tsx",
-      "source_location": "L1",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_dashboard_library_page",
+      "target": "src_lib_env_hassupabaseenv",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/app/(dashboard)/library/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_dashboard_overview_page",
+      "target": "src_lib_dashboard_data_getoverviewdata",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/app/(dashboard)/overview/page.tsx",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -6598,7 +6836,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/app/(dashboard)/overview/page.tsx",
-      "source_location": "L3",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -7343,6 +7581,18 @@
       "context": "import",
       "source_file": "src/lib/content/actions.ts",
       "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_dashboard_data",
+      "target": "src_lib_supabase_server_createsupabaseserverclient",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/dashboard/data.ts",
+      "source_location": "L2",
       "weight": 1.0
     },
     {
@@ -8307,14 +8557,38 @@
     },
     {
       "source": "src_app_dashboard_library_page",
-      "target": "src_components_shell_coming_soon",
+      "target": "src_lib_dashboard_data",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/app/(dashboard)/library/page.tsx",
-      "source_location": "L1",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_dashboard_library_page",
+      "target": "src_lib_env",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/app/(dashboard)/library/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_dashboard_overview_page",
+      "target": "src_lib_dashboard_data",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/app/(dashboard)/overview/page.tsx",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -8326,7 +8600,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/app/(dashboard)/overview/page.tsx",
-      "source_location": "L3",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -8987,6 +9261,18 @@
       "context": "import",
       "source_file": "src/lib/content/actions.ts",
       "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_dashboard_data",
+      "target": "src_lib_supabase_server",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/dashboard/data.ts",
+      "source_location": "L2",
       "weight": 1.0
     },
     {
@@ -10438,6 +10724,28 @@
       "weight": 1.0
     },
     {
+      "source": "src_app_dashboard_error",
+      "target": "src_app_dashboard_error_dashboarderror",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/(dashboard)/error.tsx",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_dashboard_error",
+      "target": "src_app_dashboard_error_friendly",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/(dashboard)/error.tsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
       "source": "src_app_dashboard_layout",
       "target": "src_app_dashboard_layout_dashboardlayout",
       "relation": "contains",
@@ -10456,7 +10764,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/(dashboard)/library/page.tsx",
-      "source_location": "L2",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -10467,7 +10775,29 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/(dashboard)/overview/page.tsx",
-      "source_location": "L4",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_dashboard_overview_page",
+      "target": "src_app_dashboard_overview_page_setup",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/(dashboard)/overview/page.tsx",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_dashboard_overview_page",
+      "target": "src_app_dashboard_overview_page_emptynext",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/(dashboard)/overview/page.tsx",
+      "source_location": "L8",
       "weight": 1.0
     },
     {
@@ -10478,7 +10808,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/(dashboard)/overview/page.tsx",
-      "source_location": "L5",
+      "source_location": "L9",
       "weight": 1.0
     },
     {
@@ -11370,6 +11700,50 @@
       "confidence_score": 1.0,
       "source_file": "src/lib/content/schema.ts",
       "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_dashboard_data",
+      "target": "src_lib_dashboard_data_signed",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/dashboard/data.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_dashboard_data",
+      "target": "src_lib_dashboard_data_panamaday",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/dashboard/data.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_dashboard_data",
+      "target": "src_lib_dashboard_data_getoverviewdata",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/dashboard/data.ts",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_dashboard_data",
+      "target": "src_lib_dashboard_data_getlibrarydata",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/dashboard/data.ts",
+      "source_location": "L9",
       "weight": 1.0
     },
     {
@@ -12862,5 +13236,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "cc1dc8d09cea5e6e53832049dc771cc940615fec"
+  "built_at_commit": "df7c1b1685eb6469eb0ca93cadacbb4d7f46d1c1"
 }

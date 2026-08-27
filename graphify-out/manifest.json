@@ -54,16 +54,16 @@
     "semantic_hash": "547a9a0880bdde8f3cfa86a63f78b458"
   },
   "src/app/(dashboard)/library/page.tsx": {
-    "mtime": 1787751639.7443025,
-    "seen": 1787752512.146704,
-    "ast_hash": "4372f78390d3ecadf05c14ec3c536db2",
-    "semantic_hash": "4372f78390d3ecadf05c14ec3c536db2"
+    "mtime": 1787844016.2609794,
+    "seen": 1787844064.160135,
+    "ast_hash": "f137c33d2f1c75ddf1ab277311a72f3a",
+    "semantic_hash": ""
   },
   "src/app/(dashboard)/overview/page.tsx": {
-    "mtime": 1787751590.2926354,
-    "seen": 1787752512.1467056,
-    "ast_hash": "049b8ec59834bb660eb26fb9018ddfba",
-    "semantic_hash": "049b8ec59834bb660eb26fb9018ddfba"
+    "mtime": 1787844016.2599797,
+    "seen": 1787844064.1601386,
+    "ast_hash": "7b9f93a65581bec84be26e7d43ccb30e",
+    "semantic_hash": ""
   },
   "src/app/(dashboard)/settings/brand/page.tsx": {
     "mtime": 1787751590.3002226,
@@ -513,6 +513,18 @@
     "mtime": 1787843554.414363,
     "seen": 1787843695.241737,
     "ast_hash": "5860c2d2736edff2e1958e26689ecd77",
+    "semantic_hash": ""
+  },
+  "src/app/(dashboard)/error.tsx": {
+    "mtime": 1787844016.2629807,
+    "seen": 1787844064.159874,
+    "ast_hash": "57b66f4f03f7fb3f9f982e3387a0964d",
+    "semantic_hash": ""
+  },
+  "src/lib/dashboard/data.ts": {
+    "mtime": 1787843957.6010244,
+    "seen": 1787844064.1715834,
+    "ast_hash": "796265c8f775228db4c8b13e569c8bba",
     "semantic_hash": ""
   }
 }
