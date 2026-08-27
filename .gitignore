@@ -49,3 +49,5 @@ next-env.d.ts
 /graphify-out/cache/
 /graphify-out/.*
 /graphify-out/20*/
+
+.vercel
