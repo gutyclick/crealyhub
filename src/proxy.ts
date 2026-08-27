@@ -1,7 +1,10 @@
 import type { NextRequest } from "next/server";
+import { NextResponse } from "next/server";
 import { refreshSession } from "@/lib/supabase/proxy";
 
 export async function proxy(request: NextRequest) {
+  // Machine-to-machine workers authenticate with CRON_SECRET in their handler.
+  if (request.nextUrl.pathname.startsWith("/api/jobs/")) return NextResponse.next();
   return refreshSession(request);
 }
 

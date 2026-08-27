@@ -1,9 +1,9 @@
 {
   "eslint.config.mjs": {
-    "mtime": 1787753787.2948704,
-    "seen": 1787753837.1529076,
-    "ast_hash": "cf74aedf1e4d5ca168ab7781ca9df242",
-    "semantic_hash": "cf74aedf1e4d5ca168ab7781ca9df242"
+    "mtime": 1787839355.5911283,
+    "seen": 1787839572.022134,
+    "ast_hash": "d532091bff0787415240513f86f3da5d",
+    "semantic_hash": "d532091bff0787415240513f86f3da5d"
   },
   "next.config.ts": {
     "mtime": 1787750985.912649,
@@ -72,10 +72,10 @@
     "semantic_hash": "605fbf9b413e99174624c060d4da9bfd"
   },
   "src/app/(dashboard)/settings/instagram/page.tsx": {
-    "mtime": 1787751639.7529263,
-    "seen": 1787752512.1467094,
-    "ast_hash": "db07e22057643b88797bd382a3daf23e",
-    "semantic_hash": "db07e22057643b88797bd382a3daf23e"
+    "mtime": 1787839233.2067072,
+    "seen": 1787839572.029251,
+    "ast_hash": "902d95ac78e98377b3c23a78c7e10886",
+    "semantic_hash": "902d95ac78e98377b3c23a78c7e10886"
   },
   "src/app/(dashboard)/settings/usage/page.tsx": {
     "mtime": 1787751639.7585027,
@@ -156,16 +156,16 @@
     "semantic_hash": "899bb0e29a977d5ecfd81ae97fd6f0a4"
   },
   "src/lib/env.ts": {
-    "mtime": 1787791369.174913,
-    "seen": 1787791423.6017523,
-    "ast_hash": "2a8ded34b55a0fbe2d96d6bf4365e640",
-    "semantic_hash": "2a8ded34b55a0fbe2d96d6bf4365e640"
+    "mtime": 1787839120.594097,
+    "seen": 1787839572.0450242,
+    "ast_hash": "9e84155badde1522cd0fecd2246519df",
+    "semantic_hash": "9e84155badde1522cd0fecd2246519df"
   },
   "src/lib/notifications/provider.ts": {
-    "mtime": 1787751353.9625864,
-    "seen": 1787752512.1467345,
-    "ast_hash": "616496ffe9bdafcdd0e923e83a4f28f3",
-    "semantic_hash": "616496ffe9bdafcdd0e923e83a4f28f3"
+    "mtime": 1787839444.0661411,
+    "seen": 1787839572.046057,
+    "ast_hash": "e418d7945e23f28cf22d8fa2067e2e8b",
+    "semantic_hash": "e418d7945e23f28cf22d8fa2067e2e8b"
   },
   "src/lib/observability/logger.ts": {
     "mtime": 1787751353.9689476,
@@ -204,10 +204,10 @@
     "semantic_hash": "d9837f38cc05303254571985e3164050"
   },
   "src/proxy.ts": {
-    "mtime": 1787751219.3282106,
-    "seen": 1787752512.1467457,
-    "ast_hash": "8e1de37d488554b75d7f64710322fd1d",
-    "semantic_hash": "8e1de37d488554b75d7f64710322fd1d"
+    "mtime": 1787839444.0641406,
+    "seen": 1787839572.0515797,
+    "ast_hash": "e7eb4950ebdcc597022d49325743b84c",
+    "semantic_hash": "e7eb4950ebdcc597022d49325743b84c"
   },
   "tsconfig.json": {
     "mtime": 1787750996.1342373,
@@ -352,5 +352,65 @@
     "seen": 1787789378.28323,
     "ast_hash": "ed6ced56574a3402e2ed7dedd21b3ecb",
     "semantic_hash": "ed6ced56574a3402e2ed7dedd21b3ecb"
+  },
+  "src/app/api/instagram/callback/route.ts": {
+    "mtime": 1787839157.6990633,
+    "seen": 1787839572.0298648,
+    "ast_hash": "9f563c8260f0f6a878823262f72c932a",
+    "semantic_hash": "9f563c8260f0f6a878823262f72c932a"
+  },
+  "src/app/api/instagram/connect/route.ts": {
+    "mtime": 1787839157.6970618,
+    "seen": 1787839572.0298681,
+    "ast_hash": "288b0e4bb9aaa2f4e251419490d8e962",
+    "semantic_hash": "288b0e4bb9aaa2f4e251419490d8e962"
+  },
+  "src/app/api/jobs/publishing/route.ts": {
+    "mtime": 1787839194.4256105,
+    "seen": 1787839572.030469,
+    "ast_hash": "dd7b2b23e6ac786cd2bd704d1d36bf8f",
+    "semantic_hash": "dd7b2b23e6ac786cd2bd704d1d36bf8f"
+  },
+  "src/components/instagram/connection-panel.tsx": {
+    "mtime": 1787839222.803323,
+    "seen": 1787839572.0341744,
+    "ast_hash": "9149d162a96782d57b4a7a3020f0edb9",
+    "semantic_hash": "9149d162a96782d57b4a7a3020f0edb9"
+  },
+  "src/lib/instagram/actions.ts": {
+    "mtime": 1787839444.069142,
+    "seen": 1787839572.0450282,
+    "ast_hash": "f5eb3f06c4c86897584ec95a5580f39e",
+    "semantic_hash": "f5eb3f06c4c86897584ec95a5580f39e"
+  },
+  "src/lib/instagram/auth.ts": {
+    "mtime": 1787839444.068144,
+    "seen": 1787839572.0450306,
+    "ast_hash": "18d9bacf1d01ef74201b8578f6be9204",
+    "semantic_hash": "18d9bacf1d01ef74201b8578f6be9204"
+  },
+  "src/lib/instagram/client.ts": {
+    "mtime": 1787839120.6020913,
+    "seen": 1787839572.0450327,
+    "ast_hash": "7e0c40ede0fe33b9b7c1c8a3b1f7db45",
+    "semantic_hash": "7e0c40ede0fe33b9b7c1c8a3b1f7db45"
+  },
+  "src/lib/instagram/crypto.ts": {
+    "mtime": 1787839120.6000948,
+    "seen": 1787839572.0450351,
+    "ast_hash": "8f8bfc5a86e79a66f422ffc79a93047d",
+    "semantic_hash": "8f8bfc5a86e79a66f422ffc79a93047d"
+  },
+  "src/lib/instagram/data.ts": {
+    "mtime": 1787839157.7015073,
+    "seen": 1787839572.0450368,
+    "ast_hash": "ec4d861fabb2ea01eaa000edcd372529",
+    "semantic_hash": "ec4d861fabb2ea01eaa000edcd372529"
+  },
+  "src/lib/jobs/publishing.ts": {
+    "mtime": 1787839194.4236114,
+    "seen": 1787839572.04555,
+    "ast_hash": "73f2117e4be254cdbaf89537e27e5bd5",
+    "semantic_hash": "73f2117e4be254cdbaf89537e27e5bd5"
   }
 }

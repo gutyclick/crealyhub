@@ -7,5 +7,5 @@ export interface NotificationProvider {
 }
 
 export class NoopNotificationProvider implements NotificationProvider {
-  async send(): Promise<void> { return; }
+  async send(event: NotificationEvent, payload: Record<string, unknown>): Promise<void> { void event; void payload; }
 }

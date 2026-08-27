@@ -1,2 +1,5 @@
-import { ComingSoon } from "@/components/shell/coming-soon";
-export default function Page(){return <ComingSoon eyebrow="Conexión" title="Instagram aún no está conectado." description="OAuth, permisos, estado del token y prueba de conexión llegarán en la Fase 4."/>}
+import {InstagramConnectionPanel} from "@/components/instagram/connection-panel";
+import {env} from "@/lib/env";
+import {getInstagramConnection} from "@/lib/instagram/data";
+export const dynamic="force-dynamic";
+export default async function Page({searchParams}:{searchParams:Promise<{error?:string;connected?:string}>}){const query=await searchParams;const connection=await getInstagramConnection();const configured=Boolean(env.META_APP_ID&&env.META_APP_SECRET&&env.TOKEN_ENCRYPTION_KEY&&(env.META_REDIRECT_URI||env.NEXT_PUBLIC_APP_URL));return <div className="mx-auto max-w-6xl"><header className="mb-8"><p className="eyebrow">Canal de publicación</p><h1 className="editorial-title mt-2 text-5xl font-semibold">Instagram, sin atajos.</h1><p className="mt-3 max-w-2xl leading-7 text-[var(--muted)]">Conexión oficial, tokens cifrados y un registro claro de cada publicación.</p></header>{query.error&&<p className="mb-5 rounded-2xl border border-red-200 bg-red-50 p-4 text-sm font-semibold text-red-700">{query.error}</p>}{query.connected&&<p className="mb-5 rounded-2xl border border-emerald-200 bg-emerald-50 p-4 text-sm font-semibold text-emerald-800">Instagram quedó conectado correctamente.</p>}<InstagramConnectionPanel connection={connection} configured={configured}/></div>}

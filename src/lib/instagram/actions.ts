@@ -1,0 +1,9 @@
+"use server";
+import {revalidatePath} from "next/cache";
+import {createSupabaseServerClient} from "@/lib/supabase/server";
+import {decryptToken,encryptToken} from "@/lib/instagram/crypto";
+import {InstagramClient} from "@/lib/instagram/client";
+import {refreshToken} from "@/lib/instagram/auth";
+async function account(){const supabase=await createSupabaseServerClient();const{data:auth}=await supabase.auth.getUser();if(!auth.user)throw new Error("Sesión expirada");const{data}=await supabase.from("instagram_accounts").select("*").single();if(!data)throw new Error("Instagram no está conectado");return{supabase,data}}
+export async function testInstagram(){const{supabase,data}=await account();try{let accessToken=decryptToken(data.access_token_ciphertext);let expiresAt=data.token_expires_at;if(expiresAt&&new Date(expiresAt).getTime()-Date.now()<7*86_400_000){const refreshed=await refreshToken(accessToken);accessToken=refreshed.accessToken;expiresAt=refreshed.expiresAt?.toISOString()??expiresAt}const profile=await new InstagramClient(accessToken,data.instagram_user_id).profile();await supabase.from("instagram_accounts").update({username:profile.username,account_type:profile.account_type??data.account_type,access_token_ciphertext:encryptToken(accessToken),token_expires_at:expiresAt,status:"CONNECTED",last_validated_at:new Date().toISOString(),last_error:null}).eq("id",data.id)}catch(error){await supabase.from("instagram_accounts").update({status:"ERROR",last_error:error instanceof Error?error.message:"Connection failed"}).eq("id",data.id)}revalidatePath("/settings/instagram")}
+export async function disconnectInstagram(){const{supabase,data}=await account();await supabase.from("instagram_accounts").update({status:"DISCONNECTED",access_token_ciphertext:"disconnected",last_error:null}).eq("id",data.id).throwOnError();revalidatePath("/settings/instagram")}
