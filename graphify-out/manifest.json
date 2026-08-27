@@ -24,10 +24,10 @@
     "semantic_hash": "239f3ebf717465dc636818a1a619398d"
   },
   "src/app/(dashboard)/analytics/page.tsx": {
-    "mtime": 1787751639.7490864,
-    "seen": 1787752512.146695,
-    "ast_hash": "339751ce54cd235bba8eacef8dfe720e",
-    "semantic_hash": "339751ce54cd235bba8eacef8dfe720e"
+    "mtime": 1787843520.6747894,
+    "seen": 1787843695.2278953,
+    "ast_hash": "067bb9c6887b85b36ef5907b33afde47",
+    "semantic_hash": ""
   },
   "src/app/(dashboard)/approvals/page.tsx": {
     "mtime": 1787789346.5948758,
@@ -234,10 +234,10 @@
     "semantic_hash": "183a4048db7cae24389e60f850d818f9"
   },
   "src/lib/ai/content-planner.ts": {
-    "mtime": 1787753459.9194062,
-    "seen": 1787753837.1665106,
-    "ast_hash": "e3e859b94d28585492455086fb09d086",
-    "semantic_hash": "e3e859b94d28585492455086fb09d086"
+    "mtime": 1787843488.0511482,
+    "seen": 1787843695.235449,
+    "ast_hash": "ff1efbd2863afc872ee9a3a9e7dc3e01",
+    "semantic_hash": ""
   },
   "src/lib/ai/copywriter.ts": {
     "mtime": 1787753459.9240189,
@@ -270,10 +270,10 @@
     "semantic_hash": "367c7d7fa557be883bdfdc1c933658c0"
   },
   "src/lib/content/memory.ts": {
-    "mtime": 1787753516.4118135,
-    "seen": 1787753837.169875,
-    "ast_hash": "fd00c840bbd4f48869d7842602bf88b8",
-    "semantic_hash": "fd00c840bbd4f48869d7842602bf88b8"
+    "mtime": 1787843488.0491471,
+    "seen": 1787843695.2390625,
+    "ast_hash": "46d3cab9c8dea19358990190a4560964",
+    "semantic_hash": ""
   },
   "src/lib/content/schema.ts": {
     "mtime": 1787753626.956192,
@@ -384,16 +384,16 @@
     "semantic_hash": "f5eb3f06c4c86897584ec95a5580f39e"
   },
   "src/lib/instagram/auth.ts": {
-    "mtime": 1787839444.068144,
-    "seen": 1787839572.0450306,
-    "ast_hash": "18d9bacf1d01ef74201b8578f6be9204",
-    "semantic_hash": "18d9bacf1d01ef74201b8578f6be9204"
+    "mtime": 1787843420.4717903,
+    "seen": 1787843695.2411947,
+    "ast_hash": "62a707170341addb7dfb5b4b3d9a8e15",
+    "semantic_hash": ""
   },
   "src/lib/instagram/client.ts": {
-    "mtime": 1787839120.6020913,
-    "seen": 1787839572.0450327,
-    "ast_hash": "7e0c40ede0fe33b9b7c1c8a3b1f7db45",
-    "semantic_hash": "7e0c40ede0fe33b9b7c1c8a3b1f7db45"
+    "mtime": 1787843420.47309,
+    "seen": 1787843695.2411988,
+    "ast_hash": "9d8727005bc7fc2c9e1a3a5aeb745123",
+    "semantic_hash": ""
   },
   "src/lib/instagram/crypto.ts": {
     "mtime": 1787839120.6000948,
@@ -444,9 +444,9 @@
     "semantic_hash": ""
   },
   "vercel.json": {
-    "mtime": 1787842611.9532058,
-    "seen": 1787842849.974146,
-    "ast_hash": "269783ff6df8993f4b4474577687fcc0",
+    "mtime": 1787843457.648903,
+    "seen": 1787843695.249007,
+    "ast_hash": "2521337759c904e3cc337eb14fa498a8",
     "semantic_hash": ""
   },
   "AGENTS.md": {
@@ -495,6 +495,24 @@
     "mtime": 1787750985.8376474,
     "seen": 1787842849.9741626,
     "ast_hash": "a2760511c65806022ad20adf74370ff3",
+    "semantic_hash": ""
+  },
+  "src/app/api/jobs/analytics/route.ts": {
+    "mtime": 1787843457.6465578,
+    "seen": 1787843695.2308402,
+    "ast_hash": "3e6cc5935f6cc0040bca44a9cbf123d8",
+    "semantic_hash": ""
+  },
+  "src/lib/analytics/data.ts": {
+    "mtime": 1787843554.4123597,
+    "seen": 1787843695.2367704,
+    "ast_hash": "fb9407349c2462c55854ebd01815ed0e",
+    "semantic_hash": ""
+  },
+  "src/lib/jobs/analytics.ts": {
+    "mtime": 1787843554.414363,
+    "seen": 1787843695.241737,
+    "ast_hash": "5860c2d2736edff2e1958e26689ecd77",
     "semantic_hash": ""
   }
 }

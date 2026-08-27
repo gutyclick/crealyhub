@@ -1,16 +1,16 @@
 # Graph Report - CrealyHub  (2026-08-27)
 
 ## Corpus Check
-- 84 files · ~9,877 words
+- 88 files · ~10,605 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 371 nodes · 668 edges · 23 communities (17 shown, 6 thin omitted)
-- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 12 edges (avg confidence: 0.81)
+- 393 nodes · 716 edges · 24 communities (18 shown, 6 thin omitted)
+- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 14 edges (avg confidence: 0.81)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `77d4e209`
+- Built from commit: `cc1dc8d0`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -26,7 +26,7 @@
 - buffer.ts
 - createSupabaseServerClient
 - sidebar.tsx
-- analytics/page.tsx
+- library/page.tsx
 - app/layout.tsx
 - src/proxy.ts
 - eslint.config.mjs
@@ -35,18 +35,19 @@
 - CrealyHub
 - vercel.json
 - AGENTS.md
+- publishing/route.ts
 
 ## God Nodes (most connected - your core abstractions)
-1. `createSupabaseServerClient()` - 27 edges
-2. `env` - 21 edges
+1. `createSupabaseServerClient()` - 29 edges
+2. `env` - 22 edges
 3. `processGenerationJob()` - 16 edges
 4. `compilerOptions` - 16 edges
-5. `InstagramClient` - 11 edges
-6. `processPublishingJob()` - 10 edges
-7. `scripts` - 9 edges
-8. `createSupabaseAdminClient()` - 9 edges
-9. `AIProvider` - 8 edges
-10. `fillContentBuffer()` - 8 edges
+5. `InstagramClient` - 14 edges
+6. `createSupabaseAdminClient()` - 11 edges
+7. `processPublishingJob()` - 10 edges
+8. `log()` - 10 edges
+9. `scripts` - 9 edges
+10. `AIProvider` - 8 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Page()` --calls--> `getApprovalQueue()`  [EXTRACTED]
@@ -63,15 +64,15 @@
 ## Import Cycles
 - None detected.
 
-## Communities (23 total, 6 thin omitted)
+## Communities (24 total, 6 thin omitted)
 
 ### Community 0 - "generation.ts"
-Cohesion: 0.09
-Nodes (36): authorized(), GET, POST, run(), planCarousel(), OpenAIProvider, planContent(), writeCopy() (+28 more)
+Cohesion: 0.11
+Nodes (30): planCarousel(), OpenAIProvider, planContent(), writeCopy(), CarouselPlan, carouselPlanSchema, carouselSlideSchema, ContentIdea (+22 more)
 
 ### Community 1 - "publishing.ts"
 Cohesion: 0.14
-Nodes (16): authorized(), GET, maxDuration, POST, run(), ApiError, InstagramClient, waitForContainer() (+8 more)
+Nodes (15): ApiError, InstagramClient, waitForContainer(), metrics, PerformanceRow, rebuildPerformancePatterns(), syncAnalytics(), Values (+7 more)
 
 ### Community 2 - "instagram/actions.ts"
 Cohesion: 0.16
@@ -98,12 +99,12 @@ Cohesion: 0.09
 Nodes (23): clsx, lucide-react, next, openai, dependencies, clsx, lucide-react, next (+15 more)
 
 ### Community 8 - "buffer.ts"
-Cohesion: 0.10
-Nodes (22): authorized(), GET, maxDuration, POST, run(), BatchGenerator(), CreateBrief(), formats (+14 more)
+Cohesion: 0.12
+Nodes (16): BatchGenerator(), CreateBrief(), formats, initial, generateBatch(), automationAllowed(), fillContentBuffer(), Format (+8 more)
 
 ### Community 9 - "createSupabaseServerClient"
-Cohesion: 0.09
-Nodes (21): BrandPage(), dynamic, Page(), Page(), pct(), metadata, BrandForm(), initial (+13 more)
+Cohesion: 0.07
+Nodes (26): number, Page(), percent(), BrandPage(), dynamic, Page(), Page(), pct() (+18 more)
 
 ### Community 10 - "sidebar.tsx"
 Cohesion: 0.31
@@ -121,25 +122,29 @@ Nodes (3): refreshSession(), config, proxy()
 Cohesion: 0.29
 Nodes (6): Base de datos local, Content Engine, CrealyHub, Desarrollo, Seguridad, Verificación
 
+### Community 23 - "publishing/route.ts"
+Cohesion: 0.11
+Nodes (23): authorized(), GET, maxDuration, POST, run(), authorized(), GET, maxDuration (+15 more)
+
 ## Knowledge Gaps
-- **111 isolated node(s):** `eslintConfig`, `nextConfig`, `name`, `version`, `private` (+106 more)
+- **119 isolated node(s):** `eslintConfig`, `nextConfig`, `name`, `version`, `private` (+114 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **6 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `env` connect `generation.ts` to `publishing.ts`, `instagram/actions.ts`, `image-generator.ts`, `buffer.ts`, `createSupabaseServerClient`?**
-  _High betweenness centrality (0.071) - this node is a cross-community bridge._
 - **Why does `createSupabaseServerClient()` connect `createSupabaseServerClient` to `buffer.ts`, `instagram/actions.ts`, `editorial/actions.ts`?**
-  _High betweenness centrality (0.069) - this node is a cross-community bridge._
+  _High betweenness centrality (0.074) - this node is a cross-community bridge._
+- **Why does `env` connect `generation.ts` to `publishing.ts`, `instagram/actions.ts`, `image-generator.ts`, `buffer.ts`, `createSupabaseServerClient`, `publishing/route.ts`?**
+  _High betweenness centrality (0.073) - this node is a cross-community bridge._
 - **Why does `InstagramClient` connect `publishing.ts` to `instagram/actions.ts`?**
-  _High betweenness centrality (0.019) - this node is a cross-community bridge._
+  _High betweenness centrality (0.024) - this node is a cross-community bridge._
 - **What connects `eslintConfig`, `nextConfig`, `name` to the rest of the system?**
-  _111 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _119 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `generation.ts` be split into smaller, more focused modules?**
-  _Cohesion score 0.09014675052410902 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.1072463768115942 - nodes in this community are weakly interconnected._
 - **Should `publishing.ts` be split into smaller, more focused modules?**
-  _Cohesion score 0.13675213675213677 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.13756613756613756 - nodes in this community are weakly interconnected._
 - **Should `devDependencies` be split into smaller, more focused modules?**
   _Cohesion score 0.0625 - nodes in this community are weakly interconnected._

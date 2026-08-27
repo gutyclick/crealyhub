@@ -160,6 +160,32 @@
       "source_location": "L4"
     },
     {
+      "id": "src_lib_jobs_analytics_performancerow",
+      "label": "PerformanceRow",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "publishing.ts",
+      "file_type": "code",
+      "norm_label": "performancerow",
+      "source_file": "src/lib/jobs/analytics.ts",
+      "source_location": "L9"
+    },
+    {
+      "id": "src_lib_jobs_analytics_values",
+      "label": "Values",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "publishing.ts",
+      "file_type": "code",
+      "norm_label": "values",
+      "source_file": "src/lib/jobs/analytics.ts",
+      "source_location": "L8"
+    },
+    {
       "id": "src_lib_jobs_publishing_asset",
       "label": "Asset",
       "_callable": true,
@@ -420,6 +446,19 @@
       "source_location": "L5"
     },
     {
+      "id": "src_lib_analytics_data_analyticsrow",
+      "label": "AnalyticsRow",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "createSupabaseServerClient",
+      "file_type": "code",
+      "norm_label": "analyticsrow",
+      "source_file": "src/lib/analytics/data.ts",
+      "source_location": "L3"
+    },
+    {
       "id": "src_lib_brand_actions_brandactionstate",
       "label": "BrandActionState",
       "_callable": true,
@@ -457,30 +496,6 @@
       "norm_label": "brandformvalues",
       "source_file": "src/lib/brand/schema.ts",
       "source_location": "L21"
-    },
-    {
-      "id": "src_app_api_jobs_generation_route_authorized",
-      "label": "authorized()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "generation.ts",
-      "file_type": "code",
-      "norm_label": "authorized()",
-      "source_file": "src/app/api/jobs/generation/route.ts",
-      "source_location": "L6"
-    },
-    {
-      "id": "src_app_api_jobs_generation_route_run",
-      "label": "run()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "generation.ts",
-      "file_type": "code",
-      "norm_label": "run()",
-      "source_file": "src/app/api/jobs/generation/route.ts",
-      "source_location": "L7"
     },
     {
       "id": "src_lib_ai_carousel_planner_plancarousel",
@@ -591,18 +606,6 @@
       "source_location": "L2"
     },
     {
-      "id": "src_lib_jobs_generation_failgenerationjob",
-      "label": "failGenerationJob()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "generation.ts",
-      "file_type": "code",
-      "norm_label": "failgenerationjob()",
-      "source_file": "src/lib/jobs/generation.ts",
-      "source_location": "L26"
-    },
-    {
       "id": "src_lib_jobs_generation_processgenerationjob",
       "label": "processGenerationJob()",
       "_callable": true,
@@ -675,30 +678,6 @@
       "source_location": "L5"
     },
     {
-      "id": "src_app_api_jobs_publishing_route_authorized",
-      "label": "authorized()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "publishing.ts",
-      "file_type": "code",
-      "norm_label": "authorized()",
-      "source_file": "src/app/api/jobs/publishing/route.ts",
-      "source_location": "L7"
-    },
-    {
-      "id": "src_app_api_jobs_publishing_route_run",
-      "label": "run()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "publishing.ts",
-      "file_type": "code",
-      "norm_label": "run()",
-      "source_file": "src/app/api/jobs/publishing/route.ts",
-      "source_location": "L8"
-    },
-    {
       "id": "src_lib_instagram_client_instagramclient_call",
       "label": ".call()",
       "_callable": true,
@@ -743,6 +722,30 @@
       "community_name": "publishing.ts",
       "file_type": "code",
       "norm_label": ".createimage()",
+      "source_file": "src/lib/instagram/client.ts",
+      "source_location": "L4"
+    },
+    {
+      "id": "src_lib_instagram_client_instagramclient_insight",
+      "label": ".insight()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "publishing.ts",
+      "file_type": "code",
+      "norm_label": ".insight()",
+      "source_file": "src/lib/instagram/client.ts",
+      "source_location": "L4"
+    },
+    {
+      "id": "src_lib_instagram_client_instagramclient_mediacounts",
+      "label": ".mediaCounts()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "publishing.ts",
+      "file_type": "code",
+      "norm_label": ".mediacounts()",
       "source_file": "src/lib/instagram/client.ts",
       "source_location": "L4"
     },
@@ -795,16 +798,28 @@
       "source_location": "L5"
     },
     {
-      "id": "src_lib_jobs_publishing_failpublishingjob",
-      "label": "failPublishingJob()",
+      "id": "src_lib_jobs_analytics_rebuildperformancepatterns",
+      "label": "rebuildPerformancePatterns()",
       "_callable": true,
       "_origin": "ast",
       "community": 1,
       "community_name": "publishing.ts",
       "file_type": "code",
-      "norm_label": "failpublishingjob()",
-      "source_file": "src/lib/jobs/publishing.ts",
-      "source_location": "L10"
+      "norm_label": "rebuildperformancepatterns()",
+      "source_file": "src/lib/jobs/analytics.ts",
+      "source_location": "L33"
+    },
+    {
+      "id": "src_lib_jobs_analytics_syncanalytics",
+      "label": "syncAnalytics()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "publishing.ts",
+      "file_type": "code",
+      "norm_label": "syncanalytics()",
+      "source_file": "src/lib/jobs/analytics.ts",
+      "source_location": "L11"
     },
     {
       "id": "src_lib_jobs_publishing_processpublishingjob",
@@ -903,24 +918,12 @@
       "source_location": "L4"
     },
     {
-      "id": "src_app_dashboard_analytics_page_page",
-      "label": "Page()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "analytics/page.tsx",
-      "file_type": "code",
-      "norm_label": "page()",
-      "source_file": "src/app/(dashboard)/analytics/page.tsx",
-      "source_location": "L2"
-    },
-    {
       "id": "src_app_dashboard_library_page_page",
       "label": "Page()",
       "_callable": true,
       "_origin": "ast",
       "community": 11,
-      "community_name": "analytics/page.tsx",
+      "community_name": "library/page.tsx",
       "file_type": "code",
       "norm_label": "page()",
       "source_file": "src/app/(dashboard)/library/page.tsx",
@@ -932,7 +935,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 11,
-      "community_name": "analytics/page.tsx",
+      "community_name": "library/page.tsx",
       "file_type": "code",
       "norm_label": "comingsoon()",
       "source_file": "src/components/shell/coming-soon.tsx",
@@ -1189,6 +1192,138 @@
       "norm_label": "key()",
       "source_file": "src/lib/instagram/crypto.ts",
       "source_location": "L4"
+    },
+    {
+      "id": "src_app_api_jobs_analytics_route_authorized",
+      "label": "authorized()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "publishing/route.ts",
+      "file_type": "code",
+      "norm_label": "authorized()",
+      "source_file": "src/app/api/jobs/analytics/route.ts",
+      "source_location": "L7"
+    },
+    {
+      "id": "src_app_api_jobs_analytics_route_run",
+      "label": "run()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "publishing/route.ts",
+      "file_type": "code",
+      "norm_label": "run()",
+      "source_file": "src/app/api/jobs/analytics/route.ts",
+      "source_location": "L8"
+    },
+    {
+      "id": "src_app_api_jobs_automation_route_authorized",
+      "label": "authorized()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "publishing/route.ts",
+      "file_type": "code",
+      "norm_label": "authorized()",
+      "source_file": "src/app/api/jobs/automation/route.ts",
+      "source_location": "L7"
+    },
+    {
+      "id": "src_app_api_jobs_automation_route_run",
+      "label": "run()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "publishing/route.ts",
+      "file_type": "code",
+      "norm_label": "run()",
+      "source_file": "src/app/api/jobs/automation/route.ts",
+      "source_location": "L8"
+    },
+    {
+      "id": "src_app_api_jobs_generation_route_authorized",
+      "label": "authorized()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "publishing/route.ts",
+      "file_type": "code",
+      "norm_label": "authorized()",
+      "source_file": "src/app/api/jobs/generation/route.ts",
+      "source_location": "L6"
+    },
+    {
+      "id": "src_app_api_jobs_generation_route_run",
+      "label": "run()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "publishing/route.ts",
+      "file_type": "code",
+      "norm_label": "run()",
+      "source_file": "src/app/api/jobs/generation/route.ts",
+      "source_location": "L7"
+    },
+    {
+      "id": "src_app_api_jobs_publishing_route_authorized",
+      "label": "authorized()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "publishing/route.ts",
+      "file_type": "code",
+      "norm_label": "authorized()",
+      "source_file": "src/app/api/jobs/publishing/route.ts",
+      "source_location": "L7"
+    },
+    {
+      "id": "src_app_api_jobs_publishing_route_run",
+      "label": "run()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "publishing/route.ts",
+      "file_type": "code",
+      "norm_label": "run()",
+      "source_file": "src/app/api/jobs/publishing/route.ts",
+      "source_location": "L8"
+    },
+    {
+      "id": "src_lib_jobs_generation_failgenerationjob",
+      "label": "failGenerationJob()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "publishing/route.ts",
+      "file_type": "code",
+      "norm_label": "failgenerationjob()",
+      "source_file": "src/lib/jobs/generation.ts",
+      "source_location": "L26"
+    },
+    {
+      "id": "src_lib_jobs_publishing_failpublishingjob",
+      "label": "failPublishingJob()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "publishing/route.ts",
+      "file_type": "code",
+      "norm_label": "failpublishingjob()",
+      "source_file": "src/lib/jobs/publishing.ts",
+      "source_location": "L10"
+    },
+    {
+      "id": "src_lib_supabase_admin_createsupabaseadminclient",
+      "label": "createSupabaseAdminClient()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "publishing/route.ts",
+      "file_type": "code",
+      "norm_label": "createsupabaseadminclient()",
+      "source_file": "src/lib/supabase/admin.ts",
+      "source_location": "L3"
     },
     {
       "id": "src_app_dashboard_approvals_page_page",
@@ -1563,30 +1698,6 @@
       "source_location": "L8"
     },
     {
-      "id": "src_app_api_jobs_automation_route_authorized",
-      "label": "authorized()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "buffer.ts",
-      "file_type": "code",
-      "norm_label": "authorized()",
-      "source_file": "src/app/api/jobs/automation/route.ts",
-      "source_location": "L7"
-    },
-    {
-      "id": "src_app_api_jobs_automation_route_run",
-      "label": "run()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "buffer.ts",
-      "file_type": "code",
-      "norm_label": "run()",
-      "source_file": "src/app/api/jobs/automation/route.ts",
-      "source_location": "L8"
-    },
-    {
       "id": "src_app_dashboard_create_page_page",
       "label": "Page()",
       "_callable": true,
@@ -1719,16 +1830,64 @@
       "source_location": "L6"
     },
     {
-      "id": "src_lib_supabase_admin_createsupabaseadminclient",
-      "label": "createSupabaseAdminClient()",
+      "id": "src_app_dashboard_analytics_page_empty",
+      "label": "Empty()",
       "_callable": true,
       "_origin": "ast",
-      "community": 8,
-      "community_name": "buffer.ts",
+      "community": 9,
+      "community_name": "createSupabaseServerClient",
       "file_type": "code",
-      "norm_label": "createsupabaseadminclient()",
-      "source_file": "src/lib/supabase/admin.ts",
-      "source_location": "L3"
+      "norm_label": "empty()",
+      "source_file": "src/app/(dashboard)/analytics/page.tsx",
+      "source_location": "L12"
+    },
+    {
+      "id": "src_app_dashboard_analytics_page_emptystate",
+      "label": "EmptyState()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "createSupabaseServerClient",
+      "file_type": "code",
+      "norm_label": "emptystate()",
+      "source_file": "src/app/(dashboard)/analytics/page.tsx",
+      "source_location": "L11"
+    },
+    {
+      "id": "src_app_dashboard_analytics_page_metric",
+      "label": "Metric()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "createSupabaseServerClient",
+      "file_type": "code",
+      "norm_label": "metric()",
+      "source_file": "src/app/(dashboard)/analytics/page.tsx",
+      "source_location": "L10"
+    },
+    {
+      "id": "src_app_dashboard_analytics_page_page",
+      "label": "Page()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "createSupabaseServerClient",
+      "file_type": "code",
+      "norm_label": "page()",
+      "source_file": "src/app/(dashboard)/analytics/page.tsx",
+      "source_location": "L6"
+    },
+    {
+      "id": "src_app_dashboard_analytics_page_percent",
+      "label": "percent()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "createSupabaseServerClient",
+      "file_type": "code",
+      "norm_label": "percent()",
+      "source_file": "src/app/(dashboard)/analytics/page.tsx",
+      "source_location": "L5"
     },
     {
       "id": "src_app_dashboard_overview_page_metric",
@@ -1863,6 +2022,18 @@
       "source_location": "L10"
     },
     {
+      "id": "src_lib_analytics_data_getanalyticsdashboard",
+      "label": "getAnalyticsDashboard()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "createSupabaseServerClient",
+      "file_type": "code",
+      "norm_label": "getanalyticsdashboard()",
+      "source_file": "src/lib/analytics/data.ts",
+      "source_location": "L4"
+    },
+    {
       "id": "src_lib_auth_actions_signin",
       "label": "signIn()",
       "_callable": true,
@@ -1945,39 +2116,6 @@
       "norm_label": "getusagedashboard()",
       "source_file": "src/lib/usage/data.ts",
       "source_location": "L4"
-    },
-    {
-      "id": "src_app_api_jobs_generation_route",
-      "label": "generation/route.ts",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "generation.ts",
-      "file_type": "code",
-      "norm_label": "generation/route.ts",
-      "source_file": "src/app/api/jobs/generation/route.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_app_api_jobs_generation_route_get",
-      "label": "GET",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "generation.ts",
-      "file_type": "code",
-      "norm_label": "get",
-      "source_file": "src/app/api/jobs/generation/route.ts",
-      "source_location": "L8"
-    },
-    {
-      "id": "src_app_api_jobs_generation_route_post",
-      "label": "POST",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "generation.ts",
-      "file_type": "code",
-      "norm_label": "post",
-      "source_file": "src/app/api/jobs/generation/route.ts",
-      "source_location": "L8"
     },
     {
       "id": "src_lib_ai_carousel_planner",
@@ -2178,17 +2316,6 @@
       "source_location": "L4"
     },
     {
-      "id": "src_lib_env_supabasesecretkey",
-      "label": "supabaseSecretKey",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "generation.ts",
-      "file_type": "code",
-      "norm_label": "supabasesecretkey",
-      "source_file": "src/lib/env.ts",
-      "source_location": "L47"
-    },
-    {
       "id": "src_lib_jobs_generation",
       "label": "generation.ts",
       "_origin": "ast",
@@ -2197,17 +2324,6 @@
       "file_type": "code",
       "norm_label": "generation.ts",
       "source_file": "src/lib/jobs/generation.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_lib_supabase_admin",
-      "label": "admin.ts",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "generation.ts",
-      "file_type": "code",
-      "norm_label": "admin.ts",
-      "source_file": "src/lib/supabase/admin.ts",
       "source_location": "L1"
     },
     {
@@ -2233,50 +2349,6 @@
       "source_location": "L1"
     },
     {
-      "id": "src_app_api_jobs_publishing_route",
-      "label": "publishing/route.ts",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "publishing.ts",
-      "file_type": "code",
-      "norm_label": "publishing/route.ts",
-      "source_file": "src/app/api/jobs/publishing/route.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_app_api_jobs_publishing_route_get",
-      "label": "GET",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "publishing.ts",
-      "file_type": "code",
-      "norm_label": "get",
-      "source_file": "src/app/api/jobs/publishing/route.ts",
-      "source_location": "L9"
-    },
-    {
-      "id": "src_app_api_jobs_publishing_route_maxduration",
-      "label": "maxDuration",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "publishing.ts",
-      "file_type": "code",
-      "norm_label": "maxduration",
-      "source_file": "src/app/api/jobs/publishing/route.ts",
-      "source_location": "L6"
-    },
-    {
-      "id": "src_app_api_jobs_publishing_route_post",
-      "label": "POST",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "publishing.ts",
-      "file_type": "code",
-      "norm_label": "post",
-      "source_file": "src/app/api/jobs/publishing/route.ts",
-      "source_location": "L9"
-    },
-    {
       "id": "src_lib_instagram_client",
       "label": "instagram/client.ts",
       "_origin": "ast",
@@ -2286,6 +2358,28 @@
       "norm_label": "instagram/client.ts",
       "source_file": "src/lib/instagram/client.ts",
       "source_location": "L1"
+    },
+    {
+      "id": "src_lib_jobs_analytics",
+      "label": "analytics.ts",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "publishing.ts",
+      "file_type": "code",
+      "norm_label": "analytics.ts",
+      "source_file": "src/lib/jobs/analytics.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_lib_jobs_analytics_metrics",
+      "label": "metrics",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "publishing.ts",
+      "file_type": "code",
+      "norm_label": "metrics",
+      "source_file": "src/lib/jobs/analytics.ts",
+      "source_location": "L7"
     },
     {
       "id": "src_lib_jobs_publishing",
@@ -2365,22 +2459,11 @@
       "source_location": "L1"
     },
     {
-      "id": "src_app_dashboard_analytics_page",
-      "label": "analytics/page.tsx",
-      "_origin": "ast",
-      "community": 11,
-      "community_name": "analytics/page.tsx",
-      "file_type": "code",
-      "norm_label": "analytics/page.tsx",
-      "source_file": "src/app/(dashboard)/analytics/page.tsx",
-      "source_location": "L1"
-    },
-    {
       "id": "src_app_dashboard_library_page",
       "label": "library/page.tsx",
       "_origin": "ast",
       "community": 11,
-      "community_name": "analytics/page.tsx",
+      "community_name": "library/page.tsx",
       "file_type": "code",
       "norm_label": "library/page.tsx",
       "source_file": "src/app/(dashboard)/library/page.tsx",
@@ -2391,7 +2474,7 @@
       "label": "coming-soon.tsx",
       "_origin": "ast",
       "community": 11,
-      "community_name": "analytics/page.tsx",
+      "community_name": "library/page.tsx",
       "file_type": "code",
       "norm_label": "coming-soon.tsx",
       "source_file": "src/components/shell/coming-soon.tsx",
@@ -2790,6 +2873,193 @@
       "node_kind": "page",
       "norm_label": "claude.md",
       "source_file": "CLAUDE.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_app_api_jobs_analytics_route",
+      "label": "analytics/route.ts",
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "publishing/route.ts",
+      "file_type": "code",
+      "norm_label": "analytics/route.ts",
+      "source_file": "src/app/api/jobs/analytics/route.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_app_api_jobs_analytics_route_get",
+      "label": "GET",
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "publishing/route.ts",
+      "file_type": "code",
+      "norm_label": "get",
+      "source_file": "src/app/api/jobs/analytics/route.ts",
+      "source_location": "L9"
+    },
+    {
+      "id": "src_app_api_jobs_analytics_route_maxduration",
+      "label": "maxDuration",
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "publishing/route.ts",
+      "file_type": "code",
+      "norm_label": "maxduration",
+      "source_file": "src/app/api/jobs/analytics/route.ts",
+      "source_location": "L6"
+    },
+    {
+      "id": "src_app_api_jobs_analytics_route_post",
+      "label": "POST",
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "publishing/route.ts",
+      "file_type": "code",
+      "norm_label": "post",
+      "source_file": "src/app/api/jobs/analytics/route.ts",
+      "source_location": "L9"
+    },
+    {
+      "id": "src_app_api_jobs_automation_route",
+      "label": "automation/route.ts",
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "publishing/route.ts",
+      "file_type": "code",
+      "norm_label": "automation/route.ts",
+      "source_file": "src/app/api/jobs/automation/route.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_app_api_jobs_automation_route_get",
+      "label": "GET",
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "publishing/route.ts",
+      "file_type": "code",
+      "norm_label": "get",
+      "source_file": "src/app/api/jobs/automation/route.ts",
+      "source_location": "L9"
+    },
+    {
+      "id": "src_app_api_jobs_automation_route_maxduration",
+      "label": "maxDuration",
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "publishing/route.ts",
+      "file_type": "code",
+      "norm_label": "maxduration",
+      "source_file": "src/app/api/jobs/automation/route.ts",
+      "source_location": "L6"
+    },
+    {
+      "id": "src_app_api_jobs_automation_route_post",
+      "label": "POST",
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "publishing/route.ts",
+      "file_type": "code",
+      "norm_label": "post",
+      "source_file": "src/app/api/jobs/automation/route.ts",
+      "source_location": "L9"
+    },
+    {
+      "id": "src_app_api_jobs_generation_route",
+      "label": "generation/route.ts",
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "publishing/route.ts",
+      "file_type": "code",
+      "norm_label": "generation/route.ts",
+      "source_file": "src/app/api/jobs/generation/route.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_app_api_jobs_generation_route_get",
+      "label": "GET",
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "publishing/route.ts",
+      "file_type": "code",
+      "norm_label": "get",
+      "source_file": "src/app/api/jobs/generation/route.ts",
+      "source_location": "L8"
+    },
+    {
+      "id": "src_app_api_jobs_generation_route_post",
+      "label": "POST",
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "publishing/route.ts",
+      "file_type": "code",
+      "norm_label": "post",
+      "source_file": "src/app/api/jobs/generation/route.ts",
+      "source_location": "L8"
+    },
+    {
+      "id": "src_app_api_jobs_publishing_route",
+      "label": "publishing/route.ts",
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "publishing/route.ts",
+      "file_type": "code",
+      "norm_label": "publishing/route.ts",
+      "source_file": "src/app/api/jobs/publishing/route.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_app_api_jobs_publishing_route_get",
+      "label": "GET",
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "publishing/route.ts",
+      "file_type": "code",
+      "norm_label": "get",
+      "source_file": "src/app/api/jobs/publishing/route.ts",
+      "source_location": "L9"
+    },
+    {
+      "id": "src_app_api_jobs_publishing_route_maxduration",
+      "label": "maxDuration",
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "publishing/route.ts",
+      "file_type": "code",
+      "norm_label": "maxduration",
+      "source_file": "src/app/api/jobs/publishing/route.ts",
+      "source_location": "L6"
+    },
+    {
+      "id": "src_app_api_jobs_publishing_route_post",
+      "label": "POST",
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "publishing/route.ts",
+      "file_type": "code",
+      "norm_label": "post",
+      "source_file": "src/app/api/jobs/publishing/route.ts",
+      "source_location": "L9"
+    },
+    {
+      "id": "src_lib_env_supabasesecretkey",
+      "label": "supabaseSecretKey",
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "publishing/route.ts",
+      "file_type": "code",
+      "norm_label": "supabasesecretkey",
+      "source_file": "src/lib/env.ts",
+      "source_location": "L47"
+    },
+    {
+      "id": "src_lib_supabase_admin",
+      "label": "admin.ts",
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "publishing/route.ts",
+      "file_type": "code",
+      "norm_label": "admin.ts",
+      "source_file": "src/lib/supabase/admin.ts",
       "source_location": "L1"
     },
     {
@@ -3904,50 +4174,6 @@
       "source_location": "L26"
     },
     {
-      "id": "src_app_api_jobs_automation_route",
-      "label": "automation/route.ts",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "buffer.ts",
-      "file_type": "code",
-      "norm_label": "automation/route.ts",
-      "source_file": "src/app/api/jobs/automation/route.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_app_api_jobs_automation_route_get",
-      "label": "GET",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "buffer.ts",
-      "file_type": "code",
-      "norm_label": "get",
-      "source_file": "src/app/api/jobs/automation/route.ts",
-      "source_location": "L9"
-    },
-    {
-      "id": "src_app_api_jobs_automation_route_maxduration",
-      "label": "maxDuration",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "buffer.ts",
-      "file_type": "code",
-      "norm_label": "maxduration",
-      "source_file": "src/app/api/jobs/automation/route.ts",
-      "source_location": "L6"
-    },
-    {
-      "id": "src_app_api_jobs_automation_route_post",
-      "label": "POST",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "buffer.ts",
-      "file_type": "code",
-      "norm_label": "post",
-      "source_file": "src/app/api/jobs/automation/route.ts",
-      "source_location": "L9"
-    },
-    {
       "id": "src_app_dashboard_create_page",
       "label": "create/page.tsx",
       "_origin": "ast",
@@ -4091,6 +4317,28 @@
       "source_location": "L1"
     },
     {
+      "id": "src_app_dashboard_analytics_page",
+      "label": "analytics/page.tsx",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "createSupabaseServerClient",
+      "file_type": "code",
+      "norm_label": "analytics/page.tsx",
+      "source_file": "src/app/(dashboard)/analytics/page.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_app_dashboard_analytics_page_number",
+      "label": "number",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "createSupabaseServerClient",
+      "file_type": "code",
+      "norm_label": "number",
+      "source_file": "src/app/(dashboard)/analytics/page.tsx",
+      "source_location": "L5"
+    },
+    {
       "id": "src_app_dashboard_overview_page",
       "label": "overview/page.tsx",
       "_origin": "ast",
@@ -4188,6 +4436,17 @@
       "norm_label": "initial",
       "source_file": "src/components/brand/brand-form.tsx",
       "source_location": "L7"
+    },
+    {
+      "id": "src_lib_analytics_data",
+      "label": "analytics/data.ts",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "createSupabaseServerClient",
+      "file_type": "code",
+      "norm_label": "analytics/data.ts",
+      "source_file": "src/lib/analytics/data.ts",
+      "source_location": "L1"
     },
     {
       "id": "src_lib_auth_actions",
@@ -4351,6 +4610,42 @@
       "weight": 1.0
     },
     {
+      "source": "src_app_api_jobs_analytics_route_run",
+      "target": "src_app_api_jobs_analytics_route_authorized",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/app/api/jobs/analytics/route.ts",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_api_jobs_analytics_route_run",
+      "target": "src_lib_jobs_analytics_syncanalytics",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/app/api/jobs/analytics/route.ts",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_api_jobs_analytics_route_run",
+      "target": "src_lib_supabase_admin_createsupabaseadminclient",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/app/api/jobs/analytics/route.ts",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
       "source": "src_app_api_jobs_automation_route_run",
       "target": "src_app_api_jobs_automation_route_authorized",
       "relation": "calls",
@@ -4479,6 +4774,30 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/app/api/jobs/publishing/route.ts",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_dashboard_analytics_page_page",
+      "target": "src_lib_analytics_data_getanalyticsdashboard",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/app/(dashboard)/analytics/page.tsx",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_dashboard_analytics_page_page",
+      "target": "src_app_dashboard_analytics_page_percent",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/app/(dashboard)/analytics/page.tsx",
       "source_location": "L8",
       "weight": 1.0
     },
@@ -4636,6 +4955,18 @@
       "context": "call",
       "source_file": "src/lib/ai/image-generator.ts",
       "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_analytics_data_getanalyticsdashboard",
+      "target": "src_lib_supabase_server_createsupabaseserverclient",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/analytics/data.ts",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -5095,6 +5426,30 @@
       "weight": 1.0
     },
     {
+      "source": "src_lib_instagram_client_instagramclient_insight",
+      "target": "src_lib_instagram_client_instagramclient_call",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/instagram/client.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_instagram_client_instagramclient_mediacounts",
+      "target": "src_lib_instagram_client_instagramclient_call",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/instagram/client.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
       "source": "src_lib_instagram_client_instagramclient_profile",
       "target": "src_lib_instagram_client_instagramclient_call",
       "relation": "calls",
@@ -5176,6 +5531,42 @@
       "context": "call",
       "source_file": "src/lib/instagram/data.ts",
       "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_jobs_analytics_syncanalytics",
+      "target": "src_lib_instagram_crypto_decrypttoken",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/jobs/analytics.ts",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_jobs_analytics_syncanalytics",
+      "target": "src_lib_observability_logger_log",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/jobs/analytics.ts",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_jobs_analytics_syncanalytics",
+      "target": "src_lib_jobs_analytics_rebuildperformancepatterns",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/jobs/analytics.ts",
+      "source_location": "L27",
       "weight": 1.0
     },
     {
@@ -5899,6 +6290,42 @@
       "weight": 1.0
     },
     {
+      "source": "src_app_api_jobs_analytics_route",
+      "target": "src_lib_env_env",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/app/api/jobs/analytics/route.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_api_jobs_analytics_route",
+      "target": "src_lib_jobs_analytics_syncanalytics",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/app/api/jobs/analytics/route.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_api_jobs_analytics_route",
+      "target": "src_lib_supabase_admin_createsupabaseadminclient",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/app/api/jobs/analytics/route.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
       "source": "src_app_api_jobs_automation_route",
       "target": "src_lib_automation_buffer_fillcontentbuffer",
       "relation": "imports",
@@ -6032,14 +6459,26 @@
     },
     {
       "source": "src_app_dashboard_analytics_page",
-      "target": "src_components_shell_coming_soon_comingsoon",
+      "target": "src_lib_analytics_data_getanalyticsdashboard",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/app/(dashboard)/analytics/page.tsx",
-      "source_location": "L1",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_dashboard_analytics_page",
+      "target": "src_lib_env_hassupabaseenv",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/app/(dashboard)/analytics/page.tsx",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -6739,6 +7178,18 @@
       "weight": 1.0
     },
     {
+      "source": "src_lib_analytics_data",
+      "target": "src_lib_supabase_server_createsupabaseserverclient",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/analytics/data.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
       "source": "src_lib_auth_actions",
       "target": "src_lib_supabase_server_createsupabaseserverclient",
       "relation": "imports",
@@ -7048,6 +7499,42 @@
       "context": "import",
       "source_file": "src/lib/instagram/data.ts",
       "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_jobs_analytics",
+      "target": "src_lib_instagram_client_instagramclient",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/jobs/analytics.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_jobs_analytics",
+      "target": "src_lib_instagram_crypto_decrypttoken",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/jobs/analytics.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_jobs_analytics",
+      "target": "src_lib_observability_logger_log",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/jobs/analytics.ts",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -7555,6 +8042,42 @@
       "weight": 1.0
     },
     {
+      "source": "src_app_api_jobs_analytics_route",
+      "target": "src_lib_env",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/app/api/jobs/analytics/route.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_api_jobs_analytics_route",
+      "target": "src_lib_jobs_analytics",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/app/api/jobs/analytics/route.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_api_jobs_analytics_route",
+      "target": "src_lib_supabase_admin",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/app/api/jobs/analytics/route.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
       "source": "src_app_api_jobs_automation_route",
       "target": "src_lib_automation_buffer",
       "relation": "imports_from",
@@ -7664,14 +8187,26 @@
     },
     {
       "source": "src_app_dashboard_analytics_page",
-      "target": "src_components_shell_coming_soon",
+      "target": "src_lib_analytics_data",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/app/(dashboard)/analytics/page.tsx",
-      "source_location": "L1",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_dashboard_analytics_page",
+      "target": "src_lib_env",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/app/(dashboard)/analytics/page.tsx",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -8299,6 +8834,18 @@
       "weight": 1.0
     },
     {
+      "source": "src_lib_analytics_data",
+      "target": "src_lib_supabase_server",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/analytics/data.ts",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
       "source": "src_lib_auth_actions",
       "target": "src_lib_supabase_server",
       "relation": "imports_from",
@@ -8572,6 +9119,42 @@
       "context": "import",
       "source_file": "src/lib/instagram/data.ts",
       "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_jobs_analytics",
+      "target": "src_lib_instagram_client",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/jobs/analytics.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_jobs_analytics",
+      "target": "src_lib_instagram_crypto",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/jobs/analytics.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_jobs_analytics",
+      "target": "src_lib_observability_logger",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/jobs/analytics.ts",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -9525,6 +10108,61 @@
       "weight": 1.0
     },
     {
+      "source": "src_app_api_jobs_analytics_route",
+      "target": "src_app_api_jobs_analytics_route_maxduration",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/api/jobs/analytics/route.ts",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_api_jobs_analytics_route",
+      "target": "src_app_api_jobs_analytics_route_authorized",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/api/jobs/analytics/route.ts",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_api_jobs_analytics_route",
+      "target": "src_app_api_jobs_analytics_route_run",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/api/jobs/analytics/route.ts",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_api_jobs_analytics_route",
+      "target": "src_app_api_jobs_analytics_route_get",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/api/jobs/analytics/route.ts",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_api_jobs_analytics_route",
+      "target": "src_app_api_jobs_analytics_route_post",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/api/jobs/analytics/route.ts",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
       "source": "src_app_api_jobs_automation_route",
       "target": "src_app_api_jobs_automation_route_maxduration",
       "relation": "contains",
@@ -9680,13 +10318,68 @@
     },
     {
       "source": "src_app_dashboard_analytics_page",
+      "target": "src_app_dashboard_analytics_page_metric",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/(dashboard)/analytics/page.tsx",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_dashboard_analytics_page",
+      "target": "src_app_dashboard_analytics_page_emptystate",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/(dashboard)/analytics/page.tsx",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_dashboard_analytics_page",
+      "target": "src_app_dashboard_analytics_page_empty",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/(dashboard)/analytics/page.tsx",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_dashboard_analytics_page",
+      "target": "src_app_dashboard_analytics_page_number",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/(dashboard)/analytics/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_dashboard_analytics_page",
+      "target": "src_app_dashboard_analytics_page_percent",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/(dashboard)/analytics/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_dashboard_analytics_page",
       "target": "src_app_dashboard_analytics_page_page",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/(dashboard)/analytics/page.tsx",
-      "source_location": "L2",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -10449,6 +11142,28 @@
       "weight": 1.0
     },
     {
+      "source": "src_lib_analytics_data",
+      "target": "src_lib_analytics_data_analyticsrow",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/analytics/data.ts",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_analytics_data",
+      "target": "src_lib_analytics_data_getanalyticsdashboard",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/analytics/data.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
       "source": "src_lib_auth_actions",
       "target": "src_lib_auth_actions_signout",
       "relation": "contains",
@@ -11051,6 +11766,61 @@
       "confidence_score": 1.0,
       "source_file": "src/lib/instagram/data.ts",
       "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_jobs_analytics",
+      "target": "src_lib_jobs_analytics_syncanalytics",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/jobs/analytics.ts",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_jobs_analytics",
+      "target": "src_lib_jobs_analytics_rebuildperformancepatterns",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/jobs/analytics.ts",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_jobs_analytics",
+      "target": "src_lib_jobs_analytics_metrics",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/jobs/analytics.ts",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_jobs_analytics",
+      "target": "src_lib_jobs_analytics_values",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/jobs/analytics.ts",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_jobs_analytics",
+      "target": "src_lib_jobs_analytics_performancerow",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/jobs/analytics.ts",
+      "source_location": "L9",
       "weight": 1.0
     },
     {
@@ -11770,6 +12540,28 @@
     },
     {
       "source": "src_lib_instagram_client_instagramclient",
+      "target": "src_lib_instagram_client_instagramclient_insight",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/instagram/client.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_instagram_client_instagramclient",
+      "target": "src_lib_instagram_client_instagramclient_mediacounts",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/instagram/client.ts",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_instagram_client_instagramclient",
       "target": "src_lib_instagram_client_instagramclient_profile",
       "relation": "method",
       "_origin": "ast",
@@ -11961,6 +12753,30 @@
       "weight": 1.0
     },
     {
+      "source": "src_lib_jobs_analytics_syncanalytics",
+      "target": "src_lib_instagram_client_instagramclient_mediacounts",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "context": "call",
+      "source_file": "src/lib/jobs/analytics.ts",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_jobs_analytics_syncanalytics",
+      "target": "src_lib_instagram_client_instagramclient_insight",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "context": "call",
+      "source_file": "src/lib/jobs/analytics.ts",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
       "source": "src_lib_jobs_generation_processgenerationjob",
       "target": "src_lib_ai_image_generator_openaiimageprovider_generate",
       "relation": "calls",
@@ -12046,5 +12862,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "77d4e2091b30a8d9c4893e505e23760cb6831609"
+  "built_at_commit": "cc1dc8d09cea5e6e53832049dc771cc940615fec"
 }

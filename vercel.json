@@ -3,6 +3,7 @@
   "crons": [
     { "path": "/api/jobs/automation", "schedule": "0 10 * * *" },
     { "path": "/api/jobs/generation", "schedule": "0 11 * * *" },
-    { "path": "/api/jobs/publishing", "schedule": "0 12 * * *" }
+    { "path": "/api/jobs/publishing", "schedule": "0 12 * * *" },
+    { "path": "/api/jobs/analytics", "schedule": "0 13 * * *" }
   ]
 }
