@@ -8,7 +8,7 @@ export type BrandRecord = {
 export type BrandContext = {
   identity: string; offer: string; audience: string; objectives: string;
   voice: string; language: string; guardrails: { allowed: string[]; forbidden: string[] };
-  defaultCta: string; hashtagRules: string; editorialRules: string;
+  defaultCta: string; hashtagRules: string; editorialRules: string; visualAssets: string[];
 };
 
 export function buildBrandContext(brand: BrandRecord): BrandContext {
@@ -23,5 +23,6 @@ export function buildBrandContext(brand: BrandRecord): BrandContext {
     defaultCta: brand.default_cta,
     hashtagRules: brand.hashtag_rules,
     editorialRules: brand.editorial_rules,
+    visualAssets: [],
   };
 }

@@ -6,10 +6,10 @@
     "semantic_hash": "d532091bff0787415240513f86f3da5d"
   },
   "next.config.ts": {
-    "mtime": 1787750985.912649,
-    "seen": 1787752512.1466868,
-    "ast_hash": "9b77af189a21a7a64e4bd7a426f64176",
-    "semantic_hash": "9b77af189a21a7a64e4bd7a426f64176"
+    "mtime": 1787878485.4058228,
+    "seen": 1787878514.217375,
+    "ast_hash": "f4d9dc9ec7f270d8fbe722f51648cf14",
+    "semantic_hash": ""
   },
   "package.json": {
     "mtime": 1787753378.0719981,
@@ -66,10 +66,10 @@
     "semantic_hash": ""
   },
   "src/app/(dashboard)/settings/brand/page.tsx": {
-    "mtime": 1787751590.3002226,
-    "seen": 1787752512.146708,
-    "ast_hash": "605fbf9b413e99174624c060d4da9bfd",
-    "semantic_hash": "605fbf9b413e99174624c060d4da9bfd"
+    "mtime": 1787878328.5135982,
+    "seen": 1787878397.424951,
+    "ast_hash": "ee30bd55ba2fe88238fb846f5ae6b37c",
+    "semantic_hash": ""
   },
   "src/app/(dashboard)/settings/instagram/page.tsx": {
     "mtime": 1787839233.2067072,
@@ -144,10 +144,10 @@
     "semantic_hash": "7f4d23f4124a53725f574188b856cf73"
   },
   "src/lib/brand/context.ts": {
-    "mtime": 1787751353.951507,
-    "seen": 1787752512.14673,
-    "ast_hash": "1a8cff7d283fac4a9efe815491b1078e",
-    "semantic_hash": "1a8cff7d283fac4a9efe815491b1078e"
+    "mtime": 1787878236.769401,
+    "seen": 1787878397.4407878,
+    "ast_hash": "f6364241a58cb780bbae060d8a8b869f",
+    "semantic_hash": ""
   },
   "src/lib/brand/schema.ts": {
     "mtime": 1787751353.9472437,
@@ -282,10 +282,10 @@
     "semantic_hash": "df727e314e249a9d73f54574b4cbe40c"
   },
   "src/lib/jobs/generation.ts": {
-    "mtime": 1787753688.4561775,
-    "seen": 1787753837.1698842,
-    "ast_hash": "c3b7598e1edb4c3bad28601ab7530d69",
-    "semantic_hash": "c3b7598e1edb4c3bad28601ab7530d69"
+    "mtime": 1787878352.964967,
+    "seen": 1787878397.4467573,
+    "ast_hash": "d3dc2084c015789a120ed3ca5e455130",
+    "semantic_hash": ""
   },
   "src/lib/jobs/queue.ts": {
     "mtime": 1787753578.235636,
@@ -525,6 +525,24 @@
     "mtime": 1787843957.6010244,
     "seen": 1787844064.1715834,
     "ast_hash": "796265c8f775228db4c8b13e569c8bba",
+    "semantic_hash": ""
+  },
+  "src/components/brand/brand-assets.tsx": {
+    "mtime": 1787878485.4088235,
+    "seen": 1787878514.2233143,
+    "ast_hash": "2426c75b2927282f1c479bc6aab8f933",
+    "semantic_hash": ""
+  },
+  "src/components/brand/brand-style.tsx": {
+    "mtime": 1787878328.5115912,
+    "seen": 1787878397.4311678,
+    "ast_hash": "e9011d31393d370ac232febc80d689cd",
+    "semantic_hash": ""
+  },
+  "src/lib/brand/assets.ts": {
+    "mtime": 1787878485.406823,
+    "seen": 1787878514.2298257,
+    "ast_hash": "d3f9c787ea7e907a0f323b920e130362",
     "semantic_hash": ""
   }
 }
