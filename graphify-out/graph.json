@@ -121,17 +121,30 @@
       "source_location": "L8"
     },
     {
-      "id": "src_lib_brand_context_brandrecord",
-      "label": "BrandRecord",
+      "id": "src_lib_ideas_actions_ideastate",
+      "label": "IdeaState",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
       "community": 0,
       "community_name": "env.ts",
       "file_type": "code",
-      "norm_label": "brandrecord",
-      "source_file": "src/lib/brand/context.ts",
-      "source_location": "L1"
+      "norm_label": "ideastate",
+      "source_file": "src/lib/ideas/actions.ts",
+      "source_location": "L14"
+    },
+    {
+      "id": "src_lib_ideas_actions_proposedidea",
+      "label": "ProposedIdea",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "env.ts",
+      "file_type": "code",
+      "norm_label": "proposedidea",
+      "source_file": "src/lib/ideas/actions.ts",
+      "source_location": "L14"
     },
     {
       "id": "src_lib_jobs_generation_job",
@@ -262,6 +275,19 @@
       "norm_label": "brandactionstate",
       "source_file": "src/lib/brand/actions.ts",
       "source_location": "L7"
+    },
+    {
+      "id": "src_lib_brand_context_brandrecord",
+      "label": "BrandRecord",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 23,
+      "community_name": "brand-form.tsx",
+      "file_type": "code",
+      "norm_label": "brandrecord",
+      "source_file": "src/lib/brand/context.ts",
+      "source_location": "L1"
     },
     {
       "id": "src_lib_brand_schema_brandformvalues",
@@ -537,27 +563,27 @@
       "source_location": "L8"
     },
     {
-      "id": "src_app_api_jobs_generation_route_authorized",
-      "label": "authorized()",
+      "id": "src_components_content_idea_radar_choosebutton",
+      "label": "ChooseButton()",
       "_callable": true,
       "_origin": "ast",
       "community": 0,
       "community_name": "env.ts",
       "file_type": "code",
-      "norm_label": "authorized()",
-      "source_file": "src/app/api/jobs/generation/route.ts",
-      "source_location": "L6"
+      "norm_label": "choosebutton()",
+      "source_file": "src/components/content/idea-radar.tsx",
+      "source_location": "L8"
     },
     {
-      "id": "src_app_api_jobs_generation_route_run",
-      "label": "run()",
+      "id": "src_components_content_idea_radar_idearadar",
+      "label": "IdeaRadar()",
       "_callable": true,
       "_origin": "ast",
       "community": 0,
       "community_name": "env.ts",
       "file_type": "code",
-      "norm_label": "run()",
-      "source_file": "src/app/api/jobs/generation/route.ts",
+      "norm_label": "idearadar()",
+      "source_file": "src/components/content/idea-radar.tsx",
       "source_location": "L7"
     },
     {
@@ -669,16 +695,40 @@
       "source_location": "L2"
     },
     {
-      "id": "src_lib_jobs_generation_failgenerationjob",
-      "label": "failGenerationJob()",
+      "id": "src_lib_ideas_actions_chooseidea",
+      "label": "chooseIdea()",
       "_callable": true,
       "_origin": "ast",
       "community": 0,
       "community_name": "env.ts",
       "file_type": "code",
-      "norm_label": "failgenerationjob()",
-      "source_file": "src/lib/jobs/generation.ts",
-      "source_location": "L26"
+      "norm_label": "chooseidea()",
+      "source_file": "src/lib/ideas/actions.ts",
+      "source_location": "L17"
+    },
+    {
+      "id": "src_lib_ideas_actions_context",
+      "label": "context()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "env.ts",
+      "file_type": "code",
+      "norm_label": "context()",
+      "source_file": "src/lib/ideas/actions.ts",
+      "source_location": "L15"
+    },
+    {
+      "id": "src_lib_ideas_actions_proposeideas",
+      "label": "proposeIdeas()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "env.ts",
+      "file_type": "code",
+      "norm_label": "proposeideas()",
+      "source_file": "src/lib/ideas/actions.ts",
+      "source_location": "L16"
     },
     {
       "id": "src_lib_jobs_generation_processgenerationjob",
@@ -1413,6 +1463,102 @@
       "source_location": "L4"
     },
     {
+      "id": "src_app_api_jobs_analytics_route_authorized",
+      "label": "authorized()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "analytics/route.ts",
+      "file_type": "code",
+      "norm_label": "authorized()",
+      "source_file": "src/app/api/jobs/analytics/route.ts",
+      "source_location": "L7"
+    },
+    {
+      "id": "src_app_api_jobs_analytics_route_run",
+      "label": "run()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "analytics/route.ts",
+      "file_type": "code",
+      "norm_label": "run()",
+      "source_file": "src/app/api/jobs/analytics/route.ts",
+      "source_location": "L8"
+    },
+    {
+      "id": "src_app_api_jobs_automation_route_authorized",
+      "label": "authorized()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "analytics/route.ts",
+      "file_type": "code",
+      "norm_label": "authorized()",
+      "source_file": "src/app/api/jobs/automation/route.ts",
+      "source_location": "L7"
+    },
+    {
+      "id": "src_app_api_jobs_automation_route_run",
+      "label": "run()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "analytics/route.ts",
+      "file_type": "code",
+      "norm_label": "run()",
+      "source_file": "src/app/api/jobs/automation/route.ts",
+      "source_location": "L8"
+    },
+    {
+      "id": "src_app_api_jobs_generation_route_authorized",
+      "label": "authorized()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "analytics/route.ts",
+      "file_type": "code",
+      "norm_label": "authorized()",
+      "source_file": "src/app/api/jobs/generation/route.ts",
+      "source_location": "L6"
+    },
+    {
+      "id": "src_app_api_jobs_generation_route_run",
+      "label": "run()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "analytics/route.ts",
+      "file_type": "code",
+      "norm_label": "run()",
+      "source_file": "src/app/api/jobs/generation/route.ts",
+      "source_location": "L7"
+    },
+    {
+      "id": "src_lib_jobs_generation_failgenerationjob",
+      "label": "failGenerationJob()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "analytics/route.ts",
+      "file_type": "code",
+      "norm_label": "failgenerationjob()",
+      "source_file": "src/lib/jobs/generation.ts",
+      "source_location": "L26"
+    },
+    {
+      "id": "src_lib_supabase_admin_createsupabaseadminclient",
+      "label": "createSupabaseAdminClient()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "analytics/route.ts",
+      "file_type": "code",
+      "norm_label": "createsupabaseadminclient()",
+      "source_file": "src/lib/supabase/admin.ts",
+      "source_location": "L3"
+    },
+    {
       "id": "src_app_dashboard_approvals_page_page",
       "label": "Page()",
       "_callable": true,
@@ -1785,54 +1931,6 @@
       "source_location": "L8"
     },
     {
-      "id": "src_app_api_jobs_analytics_route_authorized",
-      "label": "authorized()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "buffer.ts",
-      "file_type": "code",
-      "norm_label": "authorized()",
-      "source_file": "src/app/api/jobs/analytics/route.ts",
-      "source_location": "L7"
-    },
-    {
-      "id": "src_app_api_jobs_analytics_route_run",
-      "label": "run()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "buffer.ts",
-      "file_type": "code",
-      "norm_label": "run()",
-      "source_file": "src/app/api/jobs/analytics/route.ts",
-      "source_location": "L8"
-    },
-    {
-      "id": "src_app_api_jobs_automation_route_authorized",
-      "label": "authorized()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "buffer.ts",
-      "file_type": "code",
-      "norm_label": "authorized()",
-      "source_file": "src/app/api/jobs/automation/route.ts",
-      "source_location": "L7"
-    },
-    {
-      "id": "src_app_api_jobs_automation_route_run",
-      "label": "run()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "buffer.ts",
-      "file_type": "code",
-      "norm_label": "run()",
-      "source_file": "src/app/api/jobs/automation/route.ts",
-      "source_location": "L8"
-    },
-    {
       "id": "src_app_dashboard_create_page_page",
       "label": "Page()",
       "_callable": true,
@@ -1842,7 +1940,7 @@
       "file_type": "code",
       "norm_label": "page()",
       "source_file": "src/app/(dashboard)/create/page.tsx",
-      "source_location": "L4"
+      "source_location": "L6"
     },
     {
       "id": "src_components_content_batch_generator_batchgenerator",
@@ -1963,18 +2061,6 @@
       "norm_label": ".send()",
       "source_file": "src/lib/notifications/provider.ts",
       "source_location": "L6"
-    },
-    {
-      "id": "src_lib_supabase_admin_createsupabaseadminclient",
-      "label": "createSupabaseAdminClient()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "buffer.ts",
-      "file_type": "code",
-      "norm_label": "createsupabaseadminclient()",
-      "source_file": "src/lib/supabase/admin.ts",
-      "source_location": "L3"
     },
     {
       "id": "src_app_dashboard_analytics_page_empty",
@@ -2385,37 +2471,26 @@
       "source_location": "L4"
     },
     {
-      "id": "src_app_api_jobs_generation_route",
-      "label": "generation/route.ts",
+      "id": "src_components_content_idea_radar",
+      "label": "idea-radar.tsx",
       "_origin": "ast",
       "community": 0,
       "community_name": "env.ts",
       "file_type": "code",
-      "norm_label": "generation/route.ts",
-      "source_file": "src/app/api/jobs/generation/route.ts",
+      "norm_label": "idea-radar.tsx",
+      "source_file": "src/components/content/idea-radar.tsx",
       "source_location": "L1"
     },
     {
-      "id": "src_app_api_jobs_generation_route_get",
-      "label": "GET",
+      "id": "src_components_content_idea_radar_initial",
+      "label": "initial",
       "_origin": "ast",
       "community": 0,
       "community_name": "env.ts",
       "file_type": "code",
-      "norm_label": "get",
-      "source_file": "src/app/api/jobs/generation/route.ts",
-      "source_location": "L8"
-    },
-    {
-      "id": "src_app_api_jobs_generation_route_post",
-      "label": "POST",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "env.ts",
-      "file_type": "code",
-      "norm_label": "post",
-      "source_file": "src/app/api/jobs/generation/route.ts",
-      "source_location": "L8"
+      "norm_label": "initial",
+      "source_file": "src/components/content/idea-radar.tsx",
+      "source_location": "L6"
     },
     {
       "id": "src_lib_ai_carousel_planner",
@@ -2614,6 +2689,17 @@
       "norm_label": "serverschema",
       "source_file": "src/lib/env.ts",
       "source_location": "L4"
+    },
+    {
+      "id": "src_lib_ideas_actions",
+      "label": "ideas/actions.ts",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "env.ts",
+      "file_type": "code",
+      "norm_label": "ideas/actions.ts",
+      "source_file": "src/lib/ideas/actions.ts",
+      "source_location": "L1"
     },
     {
       "id": "src_lib_jobs_generation",
@@ -3305,6 +3391,149 @@
       "file_type": "code",
       "norm_label": "error.tsx",
       "source_file": "src/app/(dashboard)/error.tsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_app_api_jobs_analytics_route",
+      "label": "analytics/route.ts",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "analytics/route.ts",
+      "file_type": "code",
+      "norm_label": "analytics/route.ts",
+      "source_file": "src/app/api/jobs/analytics/route.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_app_api_jobs_analytics_route_get",
+      "label": "GET",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "analytics/route.ts",
+      "file_type": "code",
+      "norm_label": "get",
+      "source_file": "src/app/api/jobs/analytics/route.ts",
+      "source_location": "L9"
+    },
+    {
+      "id": "src_app_api_jobs_analytics_route_maxduration",
+      "label": "maxDuration",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "analytics/route.ts",
+      "file_type": "code",
+      "norm_label": "maxduration",
+      "source_file": "src/app/api/jobs/analytics/route.ts",
+      "source_location": "L6"
+    },
+    {
+      "id": "src_app_api_jobs_analytics_route_post",
+      "label": "POST",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "analytics/route.ts",
+      "file_type": "code",
+      "norm_label": "post",
+      "source_file": "src/app/api/jobs/analytics/route.ts",
+      "source_location": "L9"
+    },
+    {
+      "id": "src_app_api_jobs_automation_route",
+      "label": "automation/route.ts",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "analytics/route.ts",
+      "file_type": "code",
+      "norm_label": "automation/route.ts",
+      "source_file": "src/app/api/jobs/automation/route.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_app_api_jobs_automation_route_get",
+      "label": "GET",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "analytics/route.ts",
+      "file_type": "code",
+      "norm_label": "get",
+      "source_file": "src/app/api/jobs/automation/route.ts",
+      "source_location": "L9"
+    },
+    {
+      "id": "src_app_api_jobs_automation_route_maxduration",
+      "label": "maxDuration",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "analytics/route.ts",
+      "file_type": "code",
+      "norm_label": "maxduration",
+      "source_file": "src/app/api/jobs/automation/route.ts",
+      "source_location": "L6"
+    },
+    {
+      "id": "src_app_api_jobs_automation_route_post",
+      "label": "POST",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "analytics/route.ts",
+      "file_type": "code",
+      "norm_label": "post",
+      "source_file": "src/app/api/jobs/automation/route.ts",
+      "source_location": "L9"
+    },
+    {
+      "id": "src_app_api_jobs_generation_route",
+      "label": "generation/route.ts",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "analytics/route.ts",
+      "file_type": "code",
+      "norm_label": "generation/route.ts",
+      "source_file": "src/app/api/jobs/generation/route.ts",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_app_api_jobs_generation_route_get",
+      "label": "GET",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "analytics/route.ts",
+      "file_type": "code",
+      "norm_label": "get",
+      "source_file": "src/app/api/jobs/generation/route.ts",
+      "source_location": "L8"
+    },
+    {
+      "id": "src_app_api_jobs_generation_route_post",
+      "label": "POST",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "analytics/route.ts",
+      "file_type": "code",
+      "norm_label": "post",
+      "source_file": "src/app/api/jobs/generation/route.ts",
+      "source_location": "L8"
+    },
+    {
+      "id": "src_lib_env_supabasesecretkey",
+      "label": "supabaseSecretKey",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "analytics/route.ts",
+      "file_type": "code",
+      "norm_label": "supabasesecretkey",
+      "source_file": "src/lib/env.ts",
+      "source_location": "L47"
+    },
+    {
+      "id": "src_lib_supabase_admin",
+      "label": "admin.ts",
+      "_origin": "ast",
+      "community": 25,
+      "community_name": "analytics/route.ts",
+      "file_type": "code",
+      "norm_label": "admin.ts",
+      "source_file": "src/lib/supabase/admin.ts",
       "source_location": "L1"
     },
     {
@@ -4419,94 +4648,6 @@
       "source_location": "L26"
     },
     {
-      "id": "src_app_api_jobs_analytics_route",
-      "label": "analytics/route.ts",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "buffer.ts",
-      "file_type": "code",
-      "norm_label": "analytics/route.ts",
-      "source_file": "src/app/api/jobs/analytics/route.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_app_api_jobs_analytics_route_get",
-      "label": "GET",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "buffer.ts",
-      "file_type": "code",
-      "norm_label": "get",
-      "source_file": "src/app/api/jobs/analytics/route.ts",
-      "source_location": "L9"
-    },
-    {
-      "id": "src_app_api_jobs_analytics_route_maxduration",
-      "label": "maxDuration",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "buffer.ts",
-      "file_type": "code",
-      "norm_label": "maxduration",
-      "source_file": "src/app/api/jobs/analytics/route.ts",
-      "source_location": "L6"
-    },
-    {
-      "id": "src_app_api_jobs_analytics_route_post",
-      "label": "POST",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "buffer.ts",
-      "file_type": "code",
-      "norm_label": "post",
-      "source_file": "src/app/api/jobs/analytics/route.ts",
-      "source_location": "L9"
-    },
-    {
-      "id": "src_app_api_jobs_automation_route",
-      "label": "automation/route.ts",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "buffer.ts",
-      "file_type": "code",
-      "norm_label": "automation/route.ts",
-      "source_file": "src/app/api/jobs/automation/route.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_app_api_jobs_automation_route_get",
-      "label": "GET",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "buffer.ts",
-      "file_type": "code",
-      "norm_label": "get",
-      "source_file": "src/app/api/jobs/automation/route.ts",
-      "source_location": "L9"
-    },
-    {
-      "id": "src_app_api_jobs_automation_route_maxduration",
-      "label": "maxDuration",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "buffer.ts",
-      "file_type": "code",
-      "norm_label": "maxduration",
-      "source_file": "src/app/api/jobs/automation/route.ts",
-      "source_location": "L6"
-    },
-    {
-      "id": "src_app_api_jobs_automation_route_post",
-      "label": "POST",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "buffer.ts",
-      "file_type": "code",
-      "norm_label": "post",
-      "source_file": "src/app/api/jobs/automation/route.ts",
-      "source_location": "L9"
-    },
-    {
       "id": "src_app_dashboard_create_page",
       "label": "create/page.tsx",
       "_origin": "ast",
@@ -4516,6 +4657,17 @@
       "norm_label": "create/page.tsx",
       "source_file": "src/app/(dashboard)/create/page.tsx",
       "source_location": "L1"
+    },
+    {
+      "id": "src_app_dashboard_create_page_maxduration",
+      "label": "maxDuration",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "buffer.ts",
+      "file_type": "code",
+      "norm_label": "maxduration",
+      "source_file": "src/app/(dashboard)/create/page.tsx",
+      "source_location": "L5"
     },
     {
       "id": "src_components_content_batch_generator",
@@ -4628,17 +4780,6 @@
       "source_location": "L2"
     },
     {
-      "id": "src_lib_env_supabasesecretkey",
-      "label": "supabaseSecretKey",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "buffer.ts",
-      "file_type": "code",
-      "norm_label": "supabasesecretkey",
-      "source_file": "src/lib/env.ts",
-      "source_location": "L47"
-    },
-    {
       "id": "src_lib_jobs_queue",
       "label": "queue.ts",
       "_origin": "ast",
@@ -4658,17 +4799,6 @@
       "file_type": "code",
       "norm_label": "notifications/provider.ts",
       "source_file": "src/lib/notifications/provider.ts",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_lib_supabase_admin",
-      "label": "admin.ts",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "buffer.ts",
-      "file_type": "code",
-      "norm_label": "admin.ts",
-      "source_file": "src/lib/supabase/admin.ts",
       "source_location": "L1"
     },
     {
@@ -5872,6 +6002,126 @@
       "context": "call",
       "source_file": "src/lib/editorial/data.ts",
       "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_ideas_actions_chooseidea",
+      "target": "src_lib_ideas_actions_context",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/ideas/actions.ts",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_ideas_actions_chooseidea",
+      "target": "src_lib_jobs_queue_enqueuegeneration",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/ideas/actions.ts",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_ideas_actions_context",
+      "target": "src_lib_supabase_server_createsupabaseserverclient",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/ideas/actions.ts",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_ideas_actions_proposeideas",
+      "target": "src_lib_ai_content_planner_plancontent",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/ideas/actions.ts",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_ideas_actions_proposeideas",
+      "target": "src_lib_brand_context_buildbrandcontext",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/ideas/actions.ts",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_ideas_actions_proposeideas",
+      "target": "src_lib_content_memory_getrecentcontentcontext",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/ideas/actions.ts",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_ideas_actions_proposeideas",
+      "target": "src_lib_ideas_actions_context",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/ideas/actions.ts",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_ideas_actions_proposeideas",
+      "target": "src_lib_usage_limits_assertgenerationallowed",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/ideas/actions.ts",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_ideas_actions_proposeideas",
+      "target": "src_lib_usage_tracker_estimatetextcost",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/ideas/actions.ts",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_ideas_actions_proposeideas",
+      "target": "src_lib_usage_tracker_recordusage",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/lib/ideas/actions.ts",
+      "source_location": "L16",
       "weight": 1.0
     },
     {
@@ -7124,7 +7374,7 @@
     },
     {
       "source": "src_app_dashboard_create_page",
-      "target": "src_lib_env_hassupabaseenv",
+      "target": "src_components_content_idea_radar_idearadar",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -7132,6 +7382,18 @@
       "context": "import",
       "source_file": "src/app/(dashboard)/create/page.tsx",
       "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_dashboard_create_page",
+      "target": "src_lib_env_hassupabaseenv",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/app/(dashboard)/create/page.tsx",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -7504,6 +7766,42 @@
       "context": "import",
       "source_file": "src/components/content/create-brief.tsx",
       "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_content_idea_radar",
+      "target": "src_lib_ideas_actions_chooseidea",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/components/content/idea-radar.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_content_idea_radar",
+      "target": "src_lib_ideas_actions_ideastate",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/components/content/idea-radar.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_content_idea_radar",
+      "target": "src_lib_ideas_actions_proposeideas",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/components/content/idea-radar.tsx",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -8128,6 +8426,138 @@
       "context": "import",
       "source_file": "src/lib/editorial/data.ts",
       "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_ideas_actions",
+      "target": "src_lib_jobs_queue_enqueuegeneration",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/ideas/actions.ts",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_ideas_actions",
+      "target": "src_lib_supabase_server_createsupabaseserverclient",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/ideas/actions.ts",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_ideas_actions",
+      "target": "src_lib_usage_limits_assertgenerationallowed",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/ideas/actions.ts",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_ideas_actions",
+      "target": "src_lib_usage_tracker_estimatetextcost",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/ideas/actions.ts",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_ideas_actions",
+      "target": "src_lib_usage_tracker_recordusage",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/ideas/actions.ts",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_ideas_actions",
+      "target": "src_lib_ai_client_openaiprovider",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/ideas/actions.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_ideas_actions",
+      "target": "src_lib_ai_content_planner_plancontent",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/ideas/actions.ts",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_ideas_actions",
+      "target": "src_lib_ai_schemas_contentideaschema",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/ideas/actions.ts",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_ideas_actions",
+      "target": "src_lib_brand_context_brandrecord",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/ideas/actions.ts",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_ideas_actions",
+      "target": "src_lib_brand_context_buildbrandcontext",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/ideas/actions.ts",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_ideas_actions",
+      "target": "src_lib_content_memory_getrecentcontentcontext",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/ideas/actions.ts",
+      "source_location": "L9",
       "weight": 1.0
     },
     {
@@ -9020,7 +9450,7 @@
     },
     {
       "source": "src_app_dashboard_create_page",
-      "target": "src_lib_env",
+      "target": "src_components_content_idea_radar",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -9028,6 +9458,18 @@
       "context": "import",
       "source_file": "src/app/(dashboard)/create/page.tsx",
       "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_dashboard_create_page",
+      "target": "src_lib_env",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/app/(dashboard)/create/page.tsx",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -9340,6 +9782,18 @@
       "context": "import",
       "source_file": "src/components/content/create-brief.tsx",
       "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_content_idea_radar",
+      "target": "src_lib_ideas_actions",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/components/content/idea-radar.tsx",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -9880,6 +10334,114 @@
       "context": "import",
       "source_file": "src/lib/editorial/data.ts",
       "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_ideas_actions",
+      "target": "src_lib_jobs_queue",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/ideas/actions.ts",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_ideas_actions",
+      "target": "src_lib_supabase_server",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/ideas/actions.ts",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_ideas_actions",
+      "target": "src_lib_usage_limits",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/ideas/actions.ts",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_ideas_actions",
+      "target": "src_lib_usage_tracker",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/ideas/actions.ts",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_ideas_actions",
+      "target": "src_lib_ai_client",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/ideas/actions.ts",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_ideas_actions",
+      "target": "src_lib_ai_content_planner",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/ideas/actions.ts",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_ideas_actions",
+      "target": "src_lib_ai_schemas",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/ideas/actions.ts",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_ideas_actions",
+      "target": "src_lib_brand_context",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/ideas/actions.ts",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_ideas_actions",
+      "target": "src_lib_content_memory",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/lib/ideas/actions.ts",
+      "source_location": "L9",
       "weight": 1.0
     },
     {
@@ -11285,13 +11847,24 @@
     },
     {
       "source": "src_app_dashboard_create_page",
+      "target": "src_app_dashboard_create_page_maxduration",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/app/(dashboard)/create/page.tsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app_dashboard_create_page",
       "target": "src_app_dashboard_create_page_page",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/app/(dashboard)/create/page.tsx",
-      "source_location": "L4",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -11721,6 +12294,39 @@
       "confidence_score": 1.0,
       "source_file": "src/components/content/create-brief.tsx",
       "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_content_idea_radar",
+      "target": "src_components_content_idea_radar_initial",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/content/idea-radar.tsx",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_content_idea_radar",
+      "target": "src_components_content_idea_radar_idearadar",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/content/idea-radar.tsx",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_content_idea_radar",
+      "target": "src_components_content_idea_radar_choosebutton",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/content/idea-radar.tsx",
+      "source_location": "L8",
       "weight": 1.0
     },
     {
@@ -12755,6 +13361,61 @@
       "confidence_score": 1.0,
       "source_file": "src/lib/env.ts",
       "source_location": "L47",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_ideas_actions",
+      "target": "src_lib_ideas_actions_ideastate",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/ideas/actions.ts",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_ideas_actions",
+      "target": "src_lib_ideas_actions_proposedidea",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/ideas/actions.ts",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_ideas_actions",
+      "target": "src_lib_ideas_actions_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/ideas/actions.ts",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_ideas_actions",
+      "target": "src_lib_ideas_actions_proposeideas",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/ideas/actions.ts",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "src_lib_ideas_actions",
+      "target": "src_lib_ideas_actions_chooseidea",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/lib/ideas/actions.ts",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -14037,8 +14698,20 @@
       "source_file": "src/components/content/create-brief.tsx",
       "source_location": "L9",
       "weight": 1.0
+    },
+    {
+      "source": "src_components_content_idea_radar_idearadar",
+      "target": "src_lib_ideas_actions_proposeideas",
+      "relation": "indirect_call",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "argument",
+      "source_file": "src/components/content/idea-radar.tsx",
+      "source_location": "L7",
+      "weight": 1.0
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "4f3888e62ceb62292aeb6a8a44d424f8914e156d"
+  "built_at_commit": "7ddc7cf765ed9229e28ab00f810ca26fb9f9986a"
 }

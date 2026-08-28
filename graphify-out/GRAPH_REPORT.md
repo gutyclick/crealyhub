@@ -1,16 +1,16 @@
 # Graph Report - CrealyHub  (2026-08-27)
 
 ## Corpus Check
-- 94 files · ~11,619 words
+- 96 files · ~11,928 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 425 nodes · 785 edges · 25 communities (19 shown, 6 thin omitted)
-- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 16 edges (avg confidence: 0.81)
+- 436 nodes · 831 edges · 26 communities (20 shown, 6 thin omitted)
+- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 17 edges (avg confidence: 0.81)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `4f3888e6`
+- Built from commit: `7ddc7cf7`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -36,18 +36,19 @@
 - AGENTS.md
 - brand-form.tsx
 - error.tsx
+- analytics/route.ts
 
 ## God Nodes (most connected - your core abstractions)
-1. `createSupabaseServerClient()` - 36 edges
+1. `createSupabaseServerClient()` - 38 edges
 2. `env` - 23 edges
 3. `processGenerationJob()` - 16 edges
 4. `compilerOptions` - 16 edges
 5. `InstagramClient` - 14 edges
 6. `createSupabaseAdminClient()` - 11 edges
-7. `processPublishingJob()` - 10 edges
-8. `log()` - 10 edges
-9. `scripts` - 9 edges
-10. `AIProvider` - 8 edges
+7. `proposeIdeas()` - 10 edges
+8. `processPublishingJob()` - 10 edges
+9. `log()` - 10 edges
+10. `scripts` - 9 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Page()` --calls--> `getApprovalQueue()`  [EXTRACTED]
@@ -64,11 +65,11 @@
 ## Import Cycles
 - None detected.
 
-## Communities (25 total, 6 thin omitted)
+## Communities (26 total, 6 thin omitted)
 
 ### Community 0 - "env.ts"
-Cohesion: 0.09
-Nodes (36): authorized(), GET, POST, run(), planCarousel(), OpenAIProvider, planContent(), writeCopy() (+28 more)
+Cohesion: 0.10
+Nodes (37): IdeaRadar(), initial, planCarousel(), OpenAIProvider, planContent(), writeCopy(), CarouselPlan, carouselPlanSchema (+29 more)
 
 ### Community 1 - "publishing.ts"
 Cohesion: 0.11
@@ -99,8 +100,8 @@ Cohesion: 0.09
 Nodes (23): clsx, lucide-react, next, openai, dependencies, clsx, lucide-react, next (+15 more)
 
 ### Community 8 - "buffer.ts"
-Cohesion: 0.08
-Nodes (28): authorized(), GET, maxDuration, POST, run(), authorized(), GET, maxDuration (+20 more)
+Cohesion: 0.11
+Nodes (17): maxDuration, BatchGenerator(), CreateBrief(), formats, initial, generateBatch(), automationAllowed(), fillContentBuffer() (+9 more)
 
 ### Community 9 - "createSupabaseServerClient"
 Cohesion: 0.06
@@ -123,27 +124,31 @@ Cohesion: 0.29
 Nodes (6): Base de datos local, Content Engine, CrealyHub, Desarrollo, Seguridad, Verificación
 
 ### Community 23 - "brand-form.tsx"
-Cohesion: 0.22
-Nodes (7): BrandForm(), initial, BrandActionState, saveBrand(), splitLines(), brandFormSchema, BrandFormValues
+Cohesion: 0.20
+Nodes (8): BrandForm(), initial, BrandActionState, saveBrand(), splitLines(), BrandRecord, brandFormSchema, BrandFormValues
+
+### Community 25 - "analytics/route.ts"
+Cohesion: 0.14
+Nodes (17): authorized(), GET, maxDuration, POST, run(), authorized(), GET, maxDuration (+9 more)
 
 ## Knowledge Gaps
-- **126 isolated node(s):** `eslintConfig`, `nextConfig`, `name`, `version`, `private` (+121 more)
+- **128 isolated node(s):** `eslintConfig`, `nextConfig`, `name`, `version`, `private` (+123 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **6 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `createSupabaseServerClient()` connect `createSupabaseServerClient` to `buffer.ts`, `instagram/actions.ts`, `editorial/actions.ts`, `brand-form.tsx`?**
-  _High betweenness centrality (0.091) - this node is a cross-community bridge._
-- **Why does `env` connect `env.ts` to `publishing.ts`, `instagram/actions.ts`, `image-generator.ts`, `buffer.ts`, `createSupabaseServerClient`?**
-  _High betweenness centrality (0.074) - this node is a cross-community bridge._
+- **Why does `createSupabaseServerClient()` connect `createSupabaseServerClient` to `env.ts`, `instagram/actions.ts`, `editorial/actions.ts`, `buffer.ts`, `brand-form.tsx`?**
+  _High betweenness centrality (0.110) - this node is a cross-community bridge._
+- **Why does `env` connect `env.ts` to `publishing.ts`, `instagram/actions.ts`, `image-generator.ts`, `buffer.ts`, `createSupabaseServerClient`, `analytics/route.ts`?**
+  _High betweenness centrality (0.060) - this node is a cross-community bridge._
 - **Why does `InstagramClient` connect `publishing.ts` to `instagram/actions.ts`?**
   _High betweenness centrality (0.023) - this node is a cross-community bridge._
 - **What connects `eslintConfig`, `nextConfig`, `name` to the rest of the system?**
-  _126 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _128 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `env.ts` be split into smaller, more focused modules?**
-  _Cohesion score 0.09143686502177069 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.09545454545454546 - nodes in this community are weakly interconnected._
 - **Should `publishing.ts` be split into smaller, more focused modules?**
   _Cohesion score 0.1092436974789916 - nodes in this community are weakly interconnected._
 - **Should `instagram/actions.ts` be split into smaller, more focused modules?**
