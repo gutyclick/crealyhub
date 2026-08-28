@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 export const contentIdeaSchema = z.object({
-  topic: z.string().min(3), objective: z.string().min(2), pillar: z.string().min(2),
+  topic: z.string().min(3), objective: z.string().min(2),
   format: z.enum(["POST", "STORY", "CAROUSEL"]), hook: z.string().min(3),
   concept: z.string().min(10), visualDirection: z.string().min(10),
   strategyReason: z.string().min(10), noveltyScore: z.number().min(0).max(1),
