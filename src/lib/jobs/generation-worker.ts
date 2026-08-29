@@ -5,7 +5,7 @@ import { failGenerationJob, processGenerationJob } from "@/lib/jobs/generation";
 import { log } from "@/lib/observability/logger";
 import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 
-type ClaimedGenerationJob = { id: string; brand_id: string; post_id: string; attempt_count: number; max_attempts: number };
+type ClaimedGenerationJob = { id: string; brand_id: string; post_id: string; attempt_count: number; max_attempts: number; input_snapshot: {revisionId?:string;sourceVersionId?:string;feedback?:string} };
 
 export async function runGenerationQueue() {
   const client = createSupabaseAdminClient();

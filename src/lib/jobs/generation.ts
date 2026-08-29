@@ -27,6 +27,11 @@ type Job = {
   post_id: string;
   attempt_count: number;
   max_attempts: number;
+  input_snapshot?: {
+    revisionId?: string;
+    sourceVersionId?: string;
+    feedback?: string;
+  };
 };
 export async function processGenerationJob(client: SupabaseClient, job: Job) {
   log("info", "Generation job started", { jobId: job.id, postId: job.post_id });
@@ -105,6 +110,7 @@ export async function processGenerationJob(client: SupabaseClient, job: Job) {
     downloadBrandAsset(logoAsset),
   ]);
   const creativeLearning = await getCreativeLearningContext(client, post.brand_id);
+  const revision = job.input_snapshot;
   let idea = rawIdea as unknown as Record<string, unknown>;
   const ai = new OpenAIProvider();
   if (idea.topic === "AUTO") {
@@ -145,8 +151,18 @@ export async function processGenerationJob(client: SupabaseClient, job: Job) {
     });
   }
   const isCarousel = post.format === "CAROUSEL";
-  const carousel = isCarousel ? await planCarousel(ai, brand, idea) : null;
-  const copy = await writeCopy(ai, brand, idea);
+  const revisionContext = revision?.feedback
+    ? {
+        ...idea,
+        revisionFeedback: revision.feedback,
+        revisionInstruction:
+          "Produce una revisión claramente distinta que atienda cada cambio solicitado y conserve el objetivo central del post.",
+      }
+    : idea;
+  const carousel = isCarousel
+    ? await planCarousel(ai, brand, revisionContext)
+    : null;
+  const copy = await writeCopy(ai, brand, revisionContext);
   await recordUsage(client, {
     brandId: post.brand_id,
     postId: post.id,
@@ -173,11 +189,18 @@ export async function processGenerationJob(client: SupabaseClient, job: Job) {
     });
   const imageCount = carousel?.data.slides.length ?? 1;
   await assertGenerationAllowed(client, post.brand_id, imageCount);
+  const { data: latestVersion } = await client
+    .from("post_versions")
+    .select("version_number")
+    .eq("post_id", post.id)
+    .order("version_number", { ascending: false })
+    .limit(1)
+    .maybeSingle();
   const { data: version, error: versionError } = await client
     .from("post_versions")
     .insert({
       post_id: post.id,
-      version_number: 1,
+      version_number: Number(latestVersion?.version_number ?? 0) + 1,
       hook: copy.data.hook,
       caption: copy.data.caption,
       cta: copy.data.cta,
@@ -186,6 +209,8 @@ export async function processGenerationJob(client: SupabaseClient, job: Job) {
       visual_direction: String(
         idea.visualDirection ?? idea.visual_direction ?? "",
       ),
+      source_version_id: revision?.sourceVersionId ?? null,
+      change_reason: revision?.feedback ?? null,
       created_by_kind: "AI",
     })
     .select("id")
@@ -198,21 +223,33 @@ export async function processGenerationJob(client: SupabaseClient, job: Job) {
     .eq("id", post.id);
   let carouselId: string | undefined;
   if (carousel) {
-    const { data: c, error: cError } = await client
+    const { data: existingCarousel } = await client
       .from("carousels")
-      .insert({
-        post_id: post.id,
-        topic: carousel.data.topic,
-        objective: carousel.data.objective,
-        hook: carousel.data.hook,
-        cta: carousel.data.cta,
-        visual_direction: carousel.data.visualDirection,
-        slide_count: carousel.data.slides.length,
-      })
+      .select("id")
+      .eq("post_id", post.id)
+      .maybeSingle();
+    const carouselValues = {
+      topic: carousel.data.topic,
+      objective: carousel.data.objective,
+      hook: carousel.data.hook,
+      cta: carousel.data.cta,
+      visual_direction: carousel.data.visualDirection,
+      slide_count: carousel.data.slides.length,
+    };
+    const carouselQuery = existingCarousel
+      ? client.from("carousels").update(carouselValues).eq("id", existingCarousel.id)
+      : client.from("carousels").insert({ post_id: post.id, ...carouselValues });
+    const { data: c, error: cError } = await carouselQuery
       .select("id")
       .single();
-    if (cError) throw new Error(`Carousel insert failed: ${cError.message}`);
+    if (cError) throw new Error(`Carousel save failed: ${cError.message}`);
     carouselId = c.id;
+    if (existingCarousel)
+      await client
+        .from("carousel_slides")
+        .delete()
+        .eq("carousel_id", c.id)
+        .throwOnError();
     await client
       .from("carousel_slides")
       .insert(
@@ -241,7 +278,13 @@ export async function processGenerationJob(client: SupabaseClient, job: Job) {
     const visual = await buildVisualPrompt(
       ai,
       brand,
-      { idea, carousel: carousel?.data, slide: unit, creativeLearning },
+      {
+        idea,
+        carousel: carousel?.data,
+        slide: unit,
+        creativeLearning,
+        revisionFeedback: revision?.feedback,
+      },
       post.format,
     );
     await recordUsage(client, {
@@ -327,6 +370,16 @@ export async function processGenerationJob(client: SupabaseClient, job: Job) {
       output_snapshot: { versionId: version.id, coverAssetId: coverId },
     })
     .eq("id", job.id);
+  if (revision?.revisionId)
+    await client
+      .from("revision_requests")
+      .update({
+        result_version_id: version.id,
+        status: "RESOLVED",
+        resolved_at: new Date().toISOString(),
+      })
+      .eq("id", revision.revisionId)
+      .throwOnError();
   log("info", "Generation job completed", { jobId: job.id, postId: post.id });
 }
 

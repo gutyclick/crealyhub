@@ -1,6 +1,8 @@
 "use server";
 import { revalidatePath } from "next/cache";
 import { z } from "zod";
+import { processGenerationQueueAfterResponse } from "@/lib/jobs/generation-worker";
+import { enqueueGeneration } from "@/lib/jobs/queue";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 const id = z.string().uuid();
@@ -161,42 +163,18 @@ export async function requestChanges(postId: string, formData: FormData) {
   const source =
     versions.find((v) => v.id === post.current_version_id) ?? versions[0];
   if (!source) throw new Error("No existe una versión para revisar");
-  const next = Number(versions[0]?.version_number ?? 0) + 1;
-  const { data: version, error } = await client
-    .from("post_versions")
-    .insert({
-      post_id: postId,
-      version_number: next,
-      hook: source.hook,
-      caption: source.caption,
-      cta: source.cta,
-      alt_text: source.alt_text,
-      hashtags: source.hashtags,
-      visual_direction: source.visual_direction,
-      source_version_id: source.id,
-      change_reason: feedback,
-      created_by_kind: "USER",
-    })
-    .select("id")
-    .single();
-  if (error) throw error;
-  await client
+  const { data: revision, error } = await client
     .from("revision_requests")
     .insert({
       post_id: postId,
       source_version_id: source.id,
-      result_version_id: version.id,
       feedback,
-      status: "RESOLVED",
+      status: "OPEN",
       created_by: user.id,
-      resolved_at: new Date().toISOString(),
     })
-    .throwOnError();
-  await client
-    .from("posts")
-    .update({ current_version_id: version.id })
-    .eq("id", postId)
-    .throwOnError();
+    .select("id")
+    .single();
+  if (error) throw error;
   await client
     .rpc("apply_editorial_transition", {
       target_post_id: postId,
@@ -204,6 +182,21 @@ export async function requestChanges(postId: string, formData: FormData) {
       event_note: feedback,
     })
     .throwOnError();
+  try {
+    await enqueueGeneration(client, {
+      brandId: String(post.brand_id),
+      postId,
+      jobType: `GENERATE_${post.format}` as "GENERATE_POST" | "GENERATE_STORY" | "GENERATE_CAROUSEL",
+      revisionId: revision.id,
+      sourceVersionId: String(source.id),
+      feedback,
+    });
+  } catch (cause) {
+    await client.from("revision_requests").delete().eq("id", revision.id);
+    throw cause;
+  }
+  await client.from("posts").update({ status: "GENERATING" }).eq("id", postId).throwOnError();
+  processGenerationQueueAfterResponse();
   refresh();
 }
 export async function editPostCopy(postId: string, formData: FormData) {
