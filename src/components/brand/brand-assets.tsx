@@ -1,11 +1,170 @@
 "use client";
 import Image from "next/image";
-import {useActionState} from "react";
-import {useFormStatus} from "react-dom";
-import {ImagePlus,Landmark,Package,Trash2,Upload} from "lucide-react";
-import {deleteBrandAsset,uploadBrandAsset,type AssetActionState} from "@/lib/brand/assets";
-type Asset={id:string;kind:"LOGO"|"VISUAL_REFERENCE"|"PRODUCT";label:string;createdAt:string;url:string|null};
-const initial:AssetActionState={ok:false,message:""};
-export function BrandAssets({assets}:{assets:Asset[]}){const[state,action]=useActionState(uploadBrandAsset,initial);const logo=assets.find(asset=>asset.kind==="LOGO");const references=assets.filter(asset=>asset.kind!=="LOGO");return <section className="card overflow-hidden"><div className="border-b border-[var(--line)] p-6 sm:p-8"><p className="eyebrow">04 · Identidad visual</p><div className="mt-3 flex flex-wrap items-end justify-between gap-4"><div><h2 className="editorial-title text-3xl font-semibold">Materiales de marca</h2><p className="mt-2 max-w-xl text-sm leading-6 text-[var(--muted)]">Sube el logo y ejemplos que definan el lenguaje visual. Permanecen privados y se usan como memoria creativa.</p></div><span className="rounded-full bg-[var(--paper)] px-3 py-1 text-xs font-bold text-[var(--muted)]">{assets.length} archivos</span></div></div><div className="grid gap-px bg-[var(--line)] lg:grid-cols-[.8fr_1.2fr]"><div className="bg-white p-6 sm:p-8"><p className="text-xs font-black uppercase tracking-widest text-[var(--muted)]">Logo principal</p>{logo?<AssetCard asset={logo} featured/>:<div className="mt-4 grid aspect-square place-items-center rounded-2xl border border-dashed border-[var(--line)] bg-[var(--paper)] text-center"><div><Landmark className="mx-auto text-[var(--violet)]"/><p className="mt-3 text-sm font-bold">Aún sin logo</p></div></div>}</div><div className="bg-white p-6 sm:p-8"><p className="text-xs font-black uppercase tracking-widest text-[var(--muted)]">Referencias y producto</p>{references.length?<div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3">{references.map(asset=><AssetCard key={asset.id} asset={asset}/>)}</div>:<div className="mt-4 grid min-h-44 place-items-center rounded-2xl bg-[var(--paper)] text-center"><div><ImagePlus className="mx-auto text-[var(--violet)]"/><p className="mt-3 text-sm font-bold">Añade ejemplos visuales</p><p className="mt-1 text-xs text-[var(--muted)]">Fotos, estilos o productos.</p></div></div>}</div></div><form action={action} className="grid gap-4 border-t border-[var(--line)] p-6 sm:grid-cols-[1fr_180px_1fr_auto] sm:items-end sm:p-8"><label className="field-label">Imagen<input className="field bg-white file:mr-3 file:border-0 file:bg-transparent file:text-xs file:font-bold" type="file" name="file" accept="image/png,image/jpeg,image/webp" required/></label><label className="field-label">Tipo<select className="field" name="kind" defaultValue="LOGO"><option value="LOGO">Logo</option><option value="VISUAL_REFERENCE">Referencia</option><option value="PRODUCT">Producto</option></select></label><label className="field-label">Nombre opcional<input className="field" name="label" placeholder="Ej. Logo oscuro" maxLength={120}/></label><Submit/><p className={`text-xs sm:col-span-4 ${state.ok?"text-emerald-700":"text-red-700"}`} aria-live="polite">{state.message||"PNG, JPG o WebP · máximo 4 MB"}</p></form></section>}
-function AssetCard({asset,featured=false}:{asset:Asset;featured?:boolean}){const remove=deleteBrandAsset.bind(null,asset.id);return <div className={`group relative overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--paper)] ${featured?"mt-4 aspect-square":"aspect-[4/5]"}`}>{asset.url?<Image src={asset.url} alt={asset.label} fill unoptimized className="object-contain p-3"/>:<Package className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-[var(--muted)]"/>}<div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-2 bg-gradient-to-t from-[var(--ink)]/85 to-transparent p-3 pt-10 text-white"><p className="truncate text-xs font-bold">{asset.label}</p><form action={remove}><button aria-label={`Eliminar ${asset.label}`} className="grid size-8 place-items-center rounded-full bg-white/15 transition hover:bg-red-500"><Trash2 size={14}/></button></form></div></div>}
-function Submit(){const{pending}=useFormStatus();return <button className="button-primary" disabled={pending}><Upload size={16}/>{pending?"Subiendo…":"Subir"}</button>}
+import { useActionState } from "react";
+import { useFormStatus } from "react-dom";
+import { ImagePlus, Landmark, Package, Trash2, Upload } from "lucide-react";
+import {
+  deleteBrandAsset,
+  uploadBrandAsset,
+  type AssetActionState,
+} from "@/lib/brand/assets";
+type Asset = {
+  id: string;
+  kind: "LOGO" | "VISUAL_REFERENCE" | "PRODUCT";
+  label: string;
+  createdAt: string;
+  url: string | null;
+};
+const initial: AssetActionState = { ok: false, message: "" };
+export function BrandAssets({ assets }: { assets: Asset[] }) {
+  const [state, action] = useActionState(uploadBrandAsset, initial);
+  const logo = assets.find((asset) => asset.kind === "LOGO");
+  const references = assets.filter((asset) => asset.kind !== "LOGO");
+  return (
+    <section className="card overflow-hidden">
+      <div className="border-b border-[var(--line)] p-6 sm:p-8">
+        <p className="eyebrow">04 · Identidad visual</p>
+        <div className="mt-3 flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <h2 className="editorial-title text-3xl font-semibold">
+              Materiales de marca
+            </h2>
+            <p className="mt-2 max-w-xl text-sm leading-6 text-[var(--muted)]">
+              Sube el logo y ejemplos que definan el lenguaje visual. Permanecen
+              privados y se usan como memoria creativa.
+            </p>
+          </div>
+          <span className="rounded-full bg-[var(--paper)] px-3 py-1 text-xs font-bold text-[var(--muted)]">
+            {assets.length} archivos
+          </span>
+        </div>
+      </div>
+      <div className="grid gap-px bg-[var(--line)] lg:grid-cols-[.8fr_1.2fr]">
+        <div className="bg-white p-6 sm:p-8">
+          <p className="text-xs font-black uppercase tracking-widest text-[var(--muted)]">
+            Logo principal
+          </p>
+          {logo ? (
+            <AssetCard asset={logo} featured />
+          ) : (
+            <div className="mt-4 grid aspect-square place-items-center rounded-2xl border border-dashed border-[var(--line)] bg-[var(--paper)] text-center">
+              <div>
+                <Landmark className="mx-auto text-[var(--violet)]" />
+                <p className="mt-3 text-sm font-bold">Aún sin logo</p>
+              </div>
+            </div>
+          )}
+        </div>
+        <div className="bg-white p-6 sm:p-8">
+          <p className="text-xs font-black uppercase tracking-widest text-[var(--muted)]">
+            Referencias y producto
+          </p>
+          {references.length ? (
+            <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
+              {references.map((asset) => (
+                <AssetCard key={asset.id} asset={asset} />
+              ))}
+            </div>
+          ) : (
+            <div className="mt-4 grid min-h-44 place-items-center rounded-2xl bg-[var(--paper)] text-center">
+              <div>
+                <ImagePlus className="mx-auto text-[var(--violet)]" />
+                <p className="mt-3 text-sm font-bold">
+                  Añade ejemplos visuales
+                </p>
+                <p className="mt-1 text-xs text-[var(--muted)]">
+                  Fotos, estilos o productos.
+                </p>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+      <form
+        action={action}
+        className="grid gap-4 border-t border-[var(--line)] p-6 sm:grid-cols-[1fr_180px_1fr_auto] sm:items-end sm:p-8"
+      >
+        <label className="field-label">
+          Imagen
+          <input
+            className="field bg-white file:mr-3 file:border-0 file:bg-transparent file:text-xs file:font-bold"
+            type="file"
+            name="file"
+            accept="image/png,image/jpeg,image/webp"
+            required
+          />
+        </label>
+        <label className="field-label">
+          Tipo
+          <select className="field" name="kind" defaultValue="LOGO">
+            <option value="LOGO">Logo</option>
+            <option value="VISUAL_REFERENCE">Referencia</option>
+            <option value="PRODUCT">Producto</option>
+          </select>
+        </label>
+        <label className="field-label">
+          Nombre opcional
+          <input
+            className="field"
+            name="label"
+            placeholder="Ej. Logo oscuro"
+            maxLength={120}
+          />
+        </label>
+        <Submit />
+        <p
+          className={`text-xs sm:col-span-4 ${state.ok ? "text-emerald-700" : "text-red-700"}`}
+          aria-live="polite"
+        >
+          {state.message || "PNG, JPG o WebP · máximo 4 MB"}
+        </p>
+      </form>
+    </section>
+  );
+}
+function AssetCard({
+  asset,
+  featured = false,
+}: {
+  asset: Asset;
+  featured?: boolean;
+}) {
+  const remove = deleteBrandAsset.bind(null, asset.id);
+  return (
+    <div
+      className={`group relative overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--paper)] ${featured ? "mt-4 aspect-square" : "aspect-[4/5]"}`}
+    >
+      {asset.url ? (
+        <Image
+          src={asset.url}
+          alt={asset.label}
+          fill
+          unoptimized
+          className="object-contain p-3"
+        />
+      ) : (
+        <Package className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-[var(--muted)]" />
+      )}
+      <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-2 bg-gradient-to-t from-[var(--ink)]/85 to-transparent p-3 pt-10 text-white">
+        <p className="truncate text-xs font-bold">{asset.label}</p>
+        <form action={remove}>
+          <button
+            aria-label={`Eliminar ${asset.label}`}
+            className="grid size-8 place-items-center rounded-full bg-white/15 transition hover:bg-red-500"
+          >
+            <Trash2 size={14} />
+          </button>
+        </form>
+      </div>
+    </div>
+  );
+}
+function Submit() {
+  const { pending } = useFormStatus();
+  return (
+    <button className="button-primary" disabled={pending}>
+      <Upload size={16} />
+      {pending ? "Subiendo…" : "Subir"}
+    </button>
+  );
+}
