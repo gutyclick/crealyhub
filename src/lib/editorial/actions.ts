@@ -3,6 +3,8 @@ import { revalidatePath } from "next/cache";
 import { z } from "zod";
 import { processGenerationQueueAfterResponse } from "@/lib/jobs/generation-worker";
 import { enqueueGeneration } from "@/lib/jobs/queue";
+import { processPublishingQueueAfterResponse } from "@/lib/jobs/publishing-worker";
+import { createSupabaseAdminClient } from "@/lib/supabase/admin";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 const id = z.string().uuid();
@@ -254,5 +256,54 @@ export async function moveSchedule(postId: string, iso: string) {
         event_note: "Programado desde calendario",
       })
       .throwOnError();
+  refresh();
+}
+
+export async function scheduleApprovedPost(postId: string, formData: FormData) {
+  const at = new Date(String(formData.get("scheduledAt") ?? ""));
+  if (Number.isNaN(at.valueOf()) || at <= new Date())
+    throw new Error("Elige una fecha futura");
+  await moveSchedule(postId, at.toISOString());
+}
+
+export async function publishApprovedPost(postId: string) {
+  const { client, post } = await context(postId);
+  if (!["APPROVED", "SCHEDULED"].includes(post.status))
+    throw new Error("Solo puedes publicar contenido aprobado");
+  const { data: account } = await client
+    .from("instagram_accounts")
+    .select("id,status")
+    .eq("brand_id", post.brand_id)
+    .maybeSingle();
+  if (!account || account.status !== "CONNECTED")
+    throw new Error("Conecta Instagram antes de publicar");
+  const now = new Date();
+  await saveSchedule(client, postId, now);
+  await client
+    .from("posts")
+    .update({ status: "SCHEDULED", scheduled_at: now.toISOString() })
+    .eq("id", postId)
+    .throwOnError();
+  const admin = createSupabaseAdminClient();
+  await admin
+    .from("publishing_jobs")
+    .upsert(
+      {
+        brand_id: post.brand_id,
+        post_id: postId,
+        instagram_account_id: account.id,
+        status: "QUEUED",
+        attempt_count: 0,
+        run_after: now.toISOString(),
+        locked_at: null,
+        locked_by: null,
+        lease_expires_at: null,
+        last_error: null,
+        finished_at: null,
+      },
+      { onConflict: "post_id" },
+    )
+    .throwOnError();
+  processPublishingQueueAfterResponse();
   refresh();
 }

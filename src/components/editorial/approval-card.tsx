@@ -5,9 +5,11 @@ import {
   ChevronLeft,
   ChevronRight,
   History,
+  Maximize2,
   PenLine,
   RotateCcw,
   Trash2,
+  X,
 } from "lucide-react";
 import {
   approvePost,
@@ -18,19 +20,16 @@ import {
 import type { EditorialPost } from "@/lib/editorial/types";
 export function ApprovalCard({ post }: { post: EditorialPost }) {
   const [slide, setSlide] = useState(0);
+  const [preview, setPreview] = useState(false);
   const [panel, setPanel] = useState<"copy" | "feedback" | "reject" | null>(null);
   const current = post.slides[slide];
   const image = current?.mediaUrl ?? post.coverUrl;
   return (
     <article className="card overflow-hidden">
       <div className="grid lg:grid-cols-[minmax(280px,.82fr)_1.18fr]">
-        <div className="relative min-h-[350px] bg-[#dfe2ec]">
+        <div className="relative min-h-[420px] bg-[#171b26]">
           {image ? (
-            <img
-              src={image}
-              alt={current?.headline ?? post.version.hook}
-              className="absolute inset-0 size-full object-cover"
-            />
+            <button type="button" onClick={()=>setPreview(true)} className="absolute inset-0 size-full cursor-zoom-in" aria-label="Ver diseño completo"><img src={image} alt={current?.headline ?? post.version.hook} className="size-full object-contain"/><span className="absolute bottom-4 right-4 grid size-10 place-items-center rounded-full bg-black/65 text-white backdrop-blur"><Maximize2 size={17}/></span></button>
           ) : (
             <div className="absolute inset-0 grid place-items-center text-sm font-semibold text-[var(--muted)]">
               Vista previa no disponible
@@ -64,6 +63,7 @@ export function ApprovalCard({ post }: { post: EditorialPost }) {
               </button>
             </>
           )}
+          {post.slides.length>1&&<div className="absolute inset-x-0 bottom-3 flex justify-center gap-1.5">{post.slides.map((item,index)=><button key={item.id} onClick={()=>setSlide(index)} aria-label={`Ver slide ${index+1}`} className={`h-1.5 rounded-full transition-all ${index===slide?"w-7 bg-white":"w-2 bg-white/45"}`}/>)}</div>}
         </div>
         <div className="flex flex-col p-6 sm:p-8">
           <div className="flex items-start justify-between gap-4">
@@ -197,6 +197,7 @@ export function ApprovalCard({ post }: { post: EditorialPost }) {
           )}
         </div>
       </div>
+      {preview&&image&&<div className="fixed inset-0 z-50 grid bg-[#080b13]/95 p-3 sm:p-6" role="dialog" aria-modal="true" aria-label="Vista completa" onClick={()=>setPreview(false)}><button onClick={()=>setPreview(false)} className="absolute right-4 top-4 z-10 grid size-11 place-items-center rounded-full bg-white text-[var(--ink)]" aria-label="Cerrar"><X size={20}/></button><div className="relative mx-auto h-full w-full max-w-6xl overflow-hidden rounded-2xl bg-black" onClick={event=>event.stopPropagation()}><img src={image} alt={current?.headline??post.version.hook} className="size-full object-contain"/>{post.slides.length>1&&<><button onClick={()=>setSlide(v=>(v-1+post.slides.length)%post.slides.length)} className="preview-arrow left-4" aria-label="Slide anterior"><ChevronLeft/></button><button onClick={()=>setSlide(v=>(v+1)%post.slides.length)} className="preview-arrow right-4" aria-label="Slide siguiente"><ChevronRight/></button><div className="absolute inset-x-0 bottom-4 flex justify-center gap-2">{post.slides.map((item,index)=><button key={item.id} onClick={()=>setSlide(index)} className={`rounded-full px-3 py-1.5 text-xs font-bold ${index===slide?"bg-white text-black":"bg-black/60 text-white"}`}>{index+1}</button>)}</div></>}</div></div>}
     </article>
   );
 }
