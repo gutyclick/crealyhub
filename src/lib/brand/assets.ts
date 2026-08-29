@@ -134,13 +134,13 @@ export async function deleteBrandAsset(assetId: string) {
 
 export async function getBrandAssets() {
   const db = await createSupabaseServerClient();
-  const { data } = await db
+  const { data, error } = await db
     .from("brand_assets")
     .select(
-      "id,kind,label,notes,created_at,media_assets(bucket,object_key,mime_type)",
+      "id,kind,label,notes,sort_order,media_assets(bucket,object_key,mime_type,created_at)",
     )
-    .order("sort_order")
-    .order("created_at", { ascending: false });
+    .order("sort_order");
+  if (error) throw new Error(`No se pudieron cargar los materiales de marca: ${error.message}`);
   return Promise.all(
     (data ?? []).map(async (asset) => {
       const media = Array.isArray(asset.media_assets)
@@ -155,7 +155,7 @@ export async function getBrandAssets() {
         id: asset.id,
         kind: asset.kind as "LOGO" | "VISUAL_REFERENCE" | "PRODUCT",
         label: asset.label,
-        createdAt: asset.created_at,
+        createdAt: media?.created_at ?? "",
         url: url?.signedUrl ?? null,
       };
     }),
