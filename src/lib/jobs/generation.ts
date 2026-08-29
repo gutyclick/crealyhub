@@ -110,15 +110,15 @@ export async function processGenerationJob(client: SupabaseClient, job: Job) {
     downloadBrandAsset(logoAsset),
   ]);
   const creativeLearning = await getCreativeLearningContext(client, post.brand_id);
+  const recentContent = await getRecentContentContext(client, post.brand_id);
   const revision = job.input_snapshot;
   let idea = rawIdea as unknown as Record<string, unknown>;
   const ai = new OpenAIProvider();
   if (idea.topic === "AUTO") {
-    const recent = await getRecentContentContext(client, post.brand_id);
     const planned = await planContent(
       ai,
       brand,
-      recent,
+      recentContent,
       1,
       String(idea.concept ?? ""),
     );
@@ -162,7 +162,7 @@ export async function processGenerationJob(client: SupabaseClient, job: Job) {
   const carousel = isCarousel
     ? await planCarousel(ai, brand, revisionContext)
     : null;
-  const copy = await writeCopy(ai, brand, revisionContext);
+  const copy = await writeCopy(ai, brand, revisionContext, recentContent);
   await recordUsage(client, {
     brandId: post.brand_id,
     postId: post.id,

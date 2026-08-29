@@ -17,6 +17,9 @@ export class OpenAIProvider implements AIProvider {
       instructions: request.instructions,
       input: request.input,
       text: { format: zodTextFormat(request.schema, request.schemaName) },
+      tools: request.webSearch
+        ? [{ type: "web_search_preview", search_context_size: "low" }]
+        : undefined,
     });
     if (!response.output_parsed) throw new Error(`OpenAI returned no structured result for ${request.operation}.`);
     return {

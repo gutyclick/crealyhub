@@ -7,6 +7,7 @@ export type StructuredRequest<TSchema extends z.ZodType> = {
   input: string;
   schema: TSchema;
   schemaName: string;
+  webSearch?: boolean;
 };
 
 export type AIUsage = { inputTokens: number; outputTokens: number; model: string };
