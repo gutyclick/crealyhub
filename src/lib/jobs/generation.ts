@@ -101,14 +101,21 @@ export async function processGenerationJob(client: SupabaseClient, job: Job) {
     }
     return Buffer.from(await data.arrayBuffer());
   };
-  const referenceAsset =
-    assetRows.find((asset) => asset.kind === "VISUAL_REFERENCE") ??
-    assetRows.find((asset) => asset.kind === "PRODUCT");
+  const referenceAssets = assetRows
+    .filter((asset) => asset.kind === "VISUAL_REFERENCE")
+    .slice(0, 4);
+  if (!referenceAssets.length) {
+    const product = assetRows.find((asset) => asset.kind === "PRODUCT");
+    if (product) referenceAssets.push(product);
+  }
   const logoAsset = assetRows.find((asset) => asset.kind === "LOGO");
-  const [referenceImage, logoImage] = await Promise.all([
-    downloadBrandAsset(referenceAsset),
+  const [referenceDownloads, logoImage] = await Promise.all([
+    Promise.all(referenceAssets.map(downloadBrandAsset)),
     downloadBrandAsset(logoAsset),
   ]);
+  const referenceImages = referenceDownloads.flatMap((image) =>
+    image ? [image] : [],
+  );
   const creativeLearning = await getCreativeLearningContext(client, post.brand_id);
   const recentContent = await getRecentContentContext(client, post.brand_id);
   const revision = job.input_snapshot;
@@ -300,9 +307,9 @@ export async function processGenerationJob(client: SupabaseClient, job: Job) {
         visual.usage.outputTokens,
       ),
     });
-    const generated = referenceImage
+    const generated = referenceImages.length
       ? await imageProvider.edit(
-          referenceImage,
+          referenceImages,
           visual.data,
           post.format as ImageFormat,
         )
@@ -314,6 +321,10 @@ export async function processGenerationJob(client: SupabaseClient, job: Job) {
       post.format as ImageFormat,
       key,
       logoImage,
+      {
+        placement: visual.data.logoPlacement,
+        scale: visual.data.logoScale,
+      },
     );
     const { data: asset, error: assetError } = await client
       .from("media_assets")

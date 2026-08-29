@@ -25,6 +25,8 @@ export const visualPromptSchema = z.object({
   subject: z.string(), composition: z.string(), artDirection: z.string(),
   palette: z.array(z.string()).min(2).max(6), displayText: z.string().min(2).max(90),
   typographyGuidance: z.string(), textPlacement: z.string(),
+  logoPlacement: z.enum(["top-left","top-center","top-right","bottom-left","bottom-center","bottom-right"]),
+  logoScale: z.enum(["small","medium"]),
   negativeInstructions: z.array(z.string()).max(12),
 });
 export type ContentIdea = z.infer<typeof contentIdeaSchema>;

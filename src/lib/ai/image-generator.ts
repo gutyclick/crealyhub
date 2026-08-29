@@ -15,7 +15,7 @@ export type GeneratedImage = {
 export interface ImageProvider {
   generate(prompt: VisualPrompt, format: ImageFormat): Promise<GeneratedImage>;
   edit(
-    source: Buffer,
+    sources: Buffer[],
     prompt: VisualPrompt,
     format: ImageFormat,
   ): Promise<GeneratedImage>;
@@ -36,6 +36,7 @@ function renderPrompt(spec: VisualPrompt, format: ImageFormat) {
     `Required on-image headline, rendered exactly once with perfect spelling: "${spec.displayText}".`,
     `Typography and hierarchy: ${spec.typographyGuidance}.`,
     `Text placement and safe area: ${spec.textPlacement}.`,
+    `Reserve clean negative space for the real logo at ${spec.logoPlacement}, ${spec.logoScale} scale. Do not draw a placeholder logo.`,
     `The headline must be clearly legible at phone size and integrated into the composition, not added as an afterthought. Use no other words.`,
     `Avoid: ${spec.negativeInstructions.join(", ")}.`,
     `No logos, watermarks, UI chrome, misspelled text, extra text, or unsafe edge placement.`,
@@ -65,19 +66,15 @@ export class OpenAIImageProvider implements ImageProvider {
     });
     return this.unpack(response);
   }
-  async edit(source: Buffer, prompt: VisualPrompt, format: ImageFormat) {
-    const normalized = await sharp(source)
-      .rotate()
-      .resize(1536, 1536, { fit: "inside", withoutEnlargement: true })
-      .png()
-      .toBuffer();
-    const image = await toFile(normalized, "reference.png", {
-      type: "image/png",
-    });
+  async edit(sources: Buffer[], prompt: VisualPrompt, format: ImageFormat) {
+    const images = await Promise.all(sources.slice(0,4).map(async(source,index)=>{
+      const normalized=await sharp(source).rotate().resize(1536,1536,{fit:"inside",withoutEnlargement:true}).png().toBuffer();
+      return toFile(normalized,`reference-${index+1}.png`,{type:"image/png"});
+    }));
     const response = await this.client.images.edit({
       model: env.OPENAI_IMAGE_MODEL,
-      image,
-      prompt: `Treat the supplied image as a strong creative style guide. Closely follow its visual language, typographic attitude, hierarchy, contrast, density, material treatment, lighting, texture, and finish quality so the result clearly belongs to the same brand family. Create a new original design for the requested post. Do not reproduce its specific layout, scene, pose, camera angle, characters, objects, illustration, wording, background, or arrangement. Preserve the brand's recognizable design grammar without making a derivative copy. Brand colors should anchor the image, while props and small elements may use harmonious varied colors.\n${renderPrompt(prompt, format)}`,
+      image:images,
+      prompt: `Treat all supplied images together as a strict creative reference set. Infer the recurring design grammar across them and follow it closely: typography attitude, hierarchy, contrast, density, whitespace, shapes, framing, material treatment, lighting, texture, and finish quality. The result must visibly belong to the same brand family. Create a new original design for the requested post. Do not reproduce any one reference's specific layout, scene, pose, camera angle, characters, objects, illustration, wording, background, or arrangement. Preserve the shared visual system without making a derivative copy. Brand colors should anchor the image, while props and small elements may use harmonious varied colors.\n${renderPrompt(prompt, format)}`,
       size: sizes[format],
       quality: "medium",
       output_format: "jpeg",
