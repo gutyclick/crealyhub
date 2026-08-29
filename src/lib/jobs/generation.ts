@@ -10,7 +10,7 @@ import { writeCopy } from "@/lib/ai/copywriter";
 import { planCarousel } from "@/lib/ai/carousel-planner";
 import { buildVisualPrompt } from "@/lib/ai/strategy";
 import { buildBrandContext, type BrandRecord } from "@/lib/brand/context";
-import { getRecentContentContext } from "@/lib/content/memory";
+import { getCreativeLearningContext, getRecentContentContext } from "@/lib/content/memory";
 import { SupabaseStorageProvider } from "@/lib/storage/supabase-provider";
 import { finalizeImage } from "@/lib/storage/image-pipeline";
 import { assertGenerationAllowed } from "@/lib/usage/limits";
@@ -104,6 +104,7 @@ export async function processGenerationJob(client: SupabaseClient, job: Job) {
     downloadBrandAsset(referenceAsset),
     downloadBrandAsset(logoAsset),
   ]);
+  const creativeLearning = await getCreativeLearningContext(client, post.brand_id);
   let idea = rawIdea as unknown as Record<string, unknown>;
   const ai = new OpenAIProvider();
   if (idea.topic === "AUTO") {
@@ -240,7 +241,7 @@ export async function processGenerationJob(client: SupabaseClient, job: Job) {
     const visual = await buildVisualPrompt(
       ai,
       brand,
-      { idea, carousel: carousel?.data, slide: unit },
+      { idea, carousel: carousel?.data, slide: unit, creativeLearning },
       post.format,
     );
     await recordUsage(client, {
