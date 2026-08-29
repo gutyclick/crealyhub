@@ -9,11 +9,12 @@ async function context(postId: string) {
   const client = await createSupabaseServerClient();
   const { data: auth } = await client.auth.getUser();
   if (!auth.user) throw new Error("Sesión expirada");
-  const { data: post } = await client
+  const { data: post, error } = await client
     .from("posts")
-    .select("id,brand_id,format,status,current_version_id,content_ideas(topic,visual_direction),post_versions(*),media_assets!posts_cover_media_asset_id_fkey(id,bucket,object_key),carousels(carousel_slides(media_assets(id,bucket,object_key)))")
+    .select("id,brand_id,format,status,current_version_id,content_ideas(topic,visual_direction),post_versions!post_versions_post_id_fkey(*),media_assets!posts_cover_media_asset_id_fkey(id,bucket,object_key),carousels(carousel_slides(media_assets(id,bucket,object_key)))")
     .eq("id", id.parse(postId))
     .single();
+  if (error) throw new Error(`No se pudo cargar el contenido: ${error.message}`);
   if (!post) throw new Error("Contenido no disponible");
   return { client, user: auth.user, post };
 }
