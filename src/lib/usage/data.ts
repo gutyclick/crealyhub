@@ -12,5 +12,5 @@ export async function getUsageDashboard(){
     db.from("agent_runs").select("id,status,summary,started_at").eq("brand_id",brand.id).eq("run_type","CONTENT_PLANNER").order("started_at",{ascending:false}).limit(5),
   ]);
   const rows=usage??[];const todayImages=rows.filter(r=>new Date(r.created_at)>=day).reduce((n,r)=>n+Number(r.images),0);
-  return {cost:rows.reduce((n,r)=>n+Number(r.estimated_cost_usd),0),todayImages,textGenerations:rows.filter(r=>Number(r.images)===0).length,queued:queued??0,buffered:buffered??0,runs:runs??[],limits:{budget:env.MONTHLY_AI_BUDGET_USD,imagesPerDay:env.MAX_IMAGES_PER_DAY,bufferDays:env.CONTENT_BUFFER_DAYS,targetPerDay:env.TARGET_CONTENT_PER_DAY}};
+  return {cost:rows.reduce((n,r)=>n+Number(r.estimated_cost_usd),0),todayImages,textGenerations:rows.filter(r=>Number(r.images)===0).length,queued:queued??0,buffered:buffered??0,runs:runs??[],limits:{bufferDays:env.CONTENT_BUFFER_DAYS,targetPerDay:env.TARGET_CONTENT_PER_DAY}};
 }

@@ -16,7 +16,7 @@ export async function automationAllowed(db:SupabaseClient,brandId:string){
   ]);
   const cost=(monthRows??[]).reduce((n,r)=>n+Number(r.estimated_cost_usd),0);
   const images=(dayRows??[]).reduce((n,r)=>n+Number(r.images),0);
-  return {allowed:cost<env.MONTHLY_AI_BUDGET_USD&&images<env.MAX_IMAGES_PER_DAY,cost,images};
+  return {allowed:true,cost,images};
 }
 
 export async function fillContentBuffer(db:SupabaseClient,options?:{brandId?:string;days?:number;batchSize?:number;source?:"AUTO"|"MANUAL"}){

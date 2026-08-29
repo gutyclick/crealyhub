@@ -22,8 +22,6 @@ const serverSchema = z.object({
   OPENAI_REQUEST_TIMEOUT_MS: z.coerce.number().int().positive().default(90_000),
   AUTOPILOT_ENABLED: z.enum(["true", "false"]).default("false"),
   SUPABASE_STORAGE_BUCKET: z.string().default("content-media"),
-  MONTHLY_AI_BUDGET_USD: z.coerce.number().nonnegative().default(100),
-  MAX_IMAGES_PER_DAY: z.coerce.number().int().positive().default(12),
   MAX_REGENERATIONS_PER_POST: z.coerce.number().int().nonnegative().default(3),
   MAX_CONCURRENT_GENERATIONS: z.coerce.number().int().positive().max(10).default(2),
   CONTENT_BUFFER_DAYS: z.coerce.number().int().positive().max(30).default(5),

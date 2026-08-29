@@ -13,7 +13,6 @@ import { buildBrandContext, type BrandRecord } from "@/lib/brand/context";
 import { getCreativeLearningContext, getRecentContentContext } from "@/lib/content/memory";
 import { SupabaseStorageProvider } from "@/lib/storage/supabase-provider";
 import { finalizeImage } from "@/lib/storage/image-pipeline";
-import { assertGenerationAllowed } from "@/lib/usage/limits";
 import {
   estimateImageCost,
   estimateTextCost,
@@ -194,8 +193,6 @@ export async function processGenerationJob(client: SupabaseClient, job: Job) {
         carousel.usage.outputTokens,
       ),
     });
-  const imageCount = carousel?.data.slides.length ?? 1;
-  await assertGenerationAllowed(client, post.brand_id, imageCount);
   const { data: latestVersion } = await client
     .from("post_versions")
     .select("version_number")
