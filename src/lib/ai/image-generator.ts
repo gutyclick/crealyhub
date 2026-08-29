@@ -33,9 +33,12 @@ function renderPrompt(spec: VisualPrompt, format: ImageFormat) {
     `Composition: ${spec.composition}.`,
     `Art direction: ${spec.artDirection}.`,
     `Palette: ${spec.palette.join(", ")}.`,
-    `Typography guidance: ${spec.typographyGuidance}.`,
+    `Required on-image headline, rendered exactly once with perfect spelling: "${spec.displayText}".`,
+    `Typography and hierarchy: ${spec.typographyGuidance}.`,
+    `Text placement and safe area: ${spec.textPlacement}.`,
+    `The headline must be clearly legible at phone size and integrated into the composition, not added as an afterthought. Use no other words.`,
     `Avoid: ${spec.negativeInstructions.join(", ")}.`,
-    `No logos, watermarks, UI chrome, gibberish text, or unsafe edge placement.`,
+    `No logos, watermarks, UI chrome, misspelled text, extra text, or unsafe edge placement.`,
   ].join("\n");
 }
 
@@ -74,7 +77,7 @@ export class OpenAIImageProvider implements ImageProvider {
     const response = await this.client.images.edit({
       model: env.OPENAI_IMAGE_MODEL,
       image,
-      prompt: `Use the supplied image only as a loose visual reference for brand mood, material, color, product identity, and finish quality. Create an original scene. Do not reproduce or closely imitate its layout, pose, camera angle, illustration, text, background, or arrangement. Brand colors should anchor the image, while props and small elements may use harmonious varied colors.\n${renderPrompt(prompt, format)}`,
+      prompt: `Treat the supplied image as a strong creative style guide. Closely follow its visual language, typographic attitude, hierarchy, contrast, density, material treatment, lighting, texture, and finish quality so the result clearly belongs to the same brand family. Create a new original design for the requested post. Do not reproduce its specific layout, scene, pose, camera angle, characters, objects, illustration, wording, background, or arrangement. Preserve the brand's recognizable design grammar without making a derivative copy. Brand colors should anchor the image, while props and small elements may use harmonious varied colors.\n${renderPrompt(prompt, format)}`,
       size: sizes[format],
       quality: "medium",
       output_format: "jpeg",

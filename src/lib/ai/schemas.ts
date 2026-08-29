@@ -23,7 +23,8 @@ export const carouselPlanSchema = z.object({
 });
 export const visualPromptSchema = z.object({
   subject: z.string(), composition: z.string(), artDirection: z.string(),
-  palette: z.array(z.string()).min(2).max(6), typographyGuidance: z.string(),
+  palette: z.array(z.string()).min(2).max(6), displayText: z.string().min(2).max(90),
+  typographyGuidance: z.string(), textPlacement: z.string(),
   negativeInstructions: z.array(z.string()).max(12),
 });
 export type ContentIdea = z.infer<typeof contentIdeaSchema>;

@@ -97,8 +97,8 @@ export async function processGenerationJob(client: SupabaseClient, job: Job) {
     return Buffer.from(await data.arrayBuffer());
   };
   const referenceAsset =
-    assetRows.find((asset) => asset.kind === "PRODUCT") ??
-    assetRows.find((asset) => asset.kind === "VISUAL_REFERENCE");
+    assetRows.find((asset) => asset.kind === "VISUAL_REFERENCE") ??
+    assetRows.find((asset) => asset.kind === "PRODUCT");
   const logoAsset = assetRows.find((asset) => asset.kind === "LOGO");
   const [referenceImage, logoImage] = await Promise.all([
     downloadBrandAsset(referenceAsset),
